@@ -30,4 +30,13 @@ export const WL = [
     'login',
     'micro',
     'token',
+    'chips',
+    'tiger',
+    'alder',
+    'rapid',
+    'comet',
+    'beach',
+    'trail',
+    'scale',
+    'sandy',
   ]

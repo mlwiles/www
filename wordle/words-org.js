@@ -1,5 +1,5 @@
 
-export const WORDS = [
+export const WO = [
     'which',
     'there',
     'their',
@@ -5757,4 +5757,8 @@ export const WORDS = [
     'rumba',
     'biffy',
     'pupal',
+    'intel',
+    'cdrom',
+    'ascii',
+    'eprom',
   ]

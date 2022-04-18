@@ -1,1 +1,286 @@
-const _0xeeb28c=_0x359b;(function(_0x1a87c6,_0x189f95){const _0x2b8de3=_0x359b,_0x370971=_0x1a87c6();while(!![]){try{const _0x385891=-parseInt(_0x2b8de3(0x117))/0x1*(parseInt(_0x2b8de3(0x10b))/0x2)+parseInt(_0x2b8de3(0x141))/0x3+parseInt(_0x2b8de3(0x13b))/0x4*(parseInt(_0x2b8de3(0x121))/0x5)+-parseInt(_0x2b8de3(0x125))/0x6*(parseInt(_0x2b8de3(0x12f))/0x7)+-parseInt(_0x2b8de3(0x145))/0x8*(-parseInt(_0x2b8de3(0x13d))/0x9)+-parseInt(_0x2b8de3(0x14c))/0xa+-parseInt(_0x2b8de3(0x136))/0xb;if(_0x385891===_0x189f95)break;else _0x370971['push'](_0x370971['shift']());}catch(_0x5182fe){_0x370971['push'](_0x370971['shift']());}}}(_0x418b,0xbe988));import{TF}from'./tf.js';import{WL}from'./wl.js';const NUMBER_OF_GUESSES=0x6;let totalCorrect=0x0,goalCorrect=0x5,guessesRemaining=NUMBER_OF_GUESSES,currentGuess=[],nextLetter=0x0,rightGuessString=WL[Math[_0xeeb28c(0x12b)](Math['random']()*WL['length'])];console[_0xeeb28c(0x14b)](rightGuessString);function _0x359b(_0x14a388,_0x586c34){const _0x418b7e=_0x418b();return _0x359b=function(_0x359b70,_0x2dacf7){_0x359b70=_0x359b70-0x10a;let _0x3645c4=_0x418b7e[_0x359b70];return _0x3645c4;},_0x359b(_0x14a388,_0x586c34);}function nextWord(){const _0x419569=_0xeeb28c;document[_0x419569(0x12c)](_0x419569(0x11e))[_0x419569(0x10f)][_0x419569(0x12e)]=_0x419569(0x113),reInitBoard();}function initBoard(){const _0x20deb8=_0xeeb28c;guessesRemaining=NUMBER_OF_GUESSES,currentGuess=[],nextLetter=0x0,rightGuessString=WL[Math[_0x20deb8(0x12b)](Math[_0x20deb8(0x150)]()*WL[_0x20deb8(0x148)])];let _0x38aa26=document['getElementById'](_0x20deb8(0x14a));for(let _0x3d958b=0x0;_0x3d958b<NUMBER_OF_GUESSES;_0x3d958b++){let _0x37aea7=document[_0x20deb8(0x10a)](_0x20deb8(0x10e));_0x37aea7['className']=_0x20deb8(0x114);for(let _0x3ce7f2=0x0;_0x3ce7f2<0x5;_0x3ce7f2++){let _0x1a54ad=document[_0x20deb8(0x10a)]('div');_0x1a54ad[_0x20deb8(0x11d)]=_0x20deb8(0x130),_0x37aea7['appendChild'](_0x1a54ad);}_0x38aa26[_0x20deb8(0x120)](_0x37aea7);}}function _0x418b(){const _0x3637ab=['1195dJSKiI','animate__','error','includes','letter-box\x20box-filled','F\x20L\x20A\x20G:\x20<br>','className','next-board','Guessed:\x20','appendChild','30DYeCAu','dispatchEvent','yellow','grey','829674pNHMcp','target','0.1s','animated','backgroundColor','green','floor','getElementById','remove','visibility','21uOWTUA','letter-box','addEventListener','match','next-word','Backspace','textContent','12568831JBLrpe','You\x20guessed\x20right!','stopPropagation','add','keyup','850332aNdPDS','success','3037275rTePSs','pop','filled-box','click','2821608OORhsn','message','innerHTML','Word\x20not\x20in\x20list!','24tGfnGu','animationend','classList','length','children','game-board','log','7863560AGGdCL','The\x20right\x20word\x20was:\x20\x22','You\x27ve\x20run\x20out\x20of\x20guesses!','from','random','getTime','Click\x20\x27next\x20word\x27\x20to\x20clear\x20the\x20board\x20and\x20get\x20another\x20word','keyboard-button','getElementsByClassName','createElement','174nsPqso','--animate-duration','Animation\x20ended','div','style','key','Not\x20enough\x20letters!','Enter','hidden','letter-row','Del','info'];_0x418b=function(){return _0x3637ab;};return _0x418b();}function eraseBoard(){const _0x33f710=_0xeeb28c;let _0xc99132=document[_0x33f710(0x12c)](_0x33f710(0x14a)),_0x439e96=_0xc99132[_0x33f710(0x154)](_0x33f710(0x114)),_0x4018c2=_0xc99132[_0x33f710(0x154)](_0x33f710(0x130));for(let _0x452bef=_0x4018c2[_0x33f710(0x148)];_0x452bef>0x0;_0x452bef--){try{_0x439e96[0x0][_0x33f710(0x12d)](_0x4018c2[_0x452bef]);}catch(_0x5e64b1){}}_0x4018c2=_0xc99132[_0x33f710(0x154)](_0x33f710(0x11b));for(let _0x56db85=_0x4018c2[_0x33f710(0x148)];_0x56db85>0x0;_0x56db85--){try{_0x439e96[0x0][_0x33f710(0x12d)](_0x4018c2[_0x56db85]);}catch(_0x4e22d0){}}}function reInitBoard(){eraseBoard(),initKeyboard('white'),initBoard();}function initKeyboard(_0x3ac458){let _0x57da77=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];for(let _0x2bd8f1=0x0;_0x2bd8f1<_0x57da77['length'];_0x2bd8f1++){shadeKeyBoard2(_0x57da77[_0x2bd8f1],_0x3ac458);}}function shadeKeyBoard2(_0x23ce3e,_0x58a8d){const _0x592027=_0xeeb28c;for(const _0x52d888 of document[_0x592027(0x154)](_0x592027(0x153))){_0x52d888[_0x592027(0x135)]===_0x23ce3e&&(_0x52d888[_0x592027(0x10f)]['backgroundColor']=_0x58a8d);}}function shadeKeyBoard(_0xf7fa76,_0x966a40){const _0x1eb9d5=_0xeeb28c;for(const _0x296187 of document[_0x1eb9d5(0x154)](_0x1eb9d5(0x153))){if(_0x296187[_0x1eb9d5(0x135)]===_0xf7fa76){let _0x181b44=_0x296187['style'][_0x1eb9d5(0x129)];if(_0x181b44===_0x1eb9d5(0x12a))return;if(_0x181b44===_0x1eb9d5(0x123)&&_0x966a40!==_0x1eb9d5(0x12a))return;_0x296187['style'][_0x1eb9d5(0x129)]=_0x966a40;break;}}}function deleteLetter(){const _0x5df23f=_0xeeb28c;let _0x3ca8ba=document['getElementsByClassName'](_0x5df23f(0x114))[0x6-guessesRemaining],_0xa9fba7=_0x3ca8ba[_0x5df23f(0x149)][nextLetter-0x1];_0xa9fba7[_0x5df23f(0x135)]='',_0xa9fba7[_0x5df23f(0x147)][_0x5df23f(0x12d)](_0x5df23f(0x13f)),currentGuess[_0x5df23f(0x13e)](),nextLetter-=0x1;}function checkGuess(){const _0x38e901=_0xeeb28c;let _0x35d6b3=document['getElementsByClassName']('letter-row')[0x6-guessesRemaining],_0x3d3225='',_0x38093e=Array[_0x38e901(0x14f)](rightGuessString);for(const _0x25ab26 of currentGuess){_0x3d3225+=_0x25ab26;}if(_0x3d3225[_0x38e901(0x148)]!=0x5){toastr['error'](_0x38e901(0x111));return;}if(!WL[_0x38e901(0x11a)](_0x3d3225)){toastr['error'](_0x38e901(0x144));return;}for(let _0xfcb19d=0x0;_0xfcb19d<0x5;_0xfcb19d++){let _0x57a246='',_0x522cfa=_0x35d6b3['children'][_0xfcb19d],_0x5960c7=currentGuess[_0xfcb19d],_0x1f3dfc=_0x38093e['indexOf'](currentGuess[_0xfcb19d]);_0x1f3dfc===-0x1?_0x57a246=_0x38e901(0x124):(currentGuess[_0xfcb19d]===_0x38093e[_0xfcb19d]?_0x57a246=_0x38e901(0x12a):_0x57a246='yellow',_0x38093e[_0x1f3dfc]='#');let _0x153b1a=0xfa*_0xfcb19d;setTimeout(()=>{const _0x5c5cb9=_0x38e901;animateCSS(_0x522cfa,'flipInX'),_0x522cfa[_0x5c5cb9(0x10f)][_0x5c5cb9(0x129)]=_0x57a246,shadeKeyBoard(_0x5960c7,_0x57a246);},_0x153b1a);}if(_0x3d3225===rightGuessString){guessesRemaining=0x0,totalCorrect++;totalCorrect===goalCorrect?(eraseBoard(),document['getElementById'](_0x38e901(0x11e))['style'][_0x38e901(0x12e)]='hidden',toastr[_0x38e901(0x13c)]('Congratulations\x20-\x20You\x20Captured\x20The\x20Flag!'),initKeyboard('green'),document[_0x38e901(0x12c)]('message')['innerHTML']=_0x38e901(0x11c)+TF[Math[_0x38e901(0x12b)](Math[_0x38e901(0x150)]()*TF[_0x38e901(0x148)])]):(toastr[_0x38e901(0x13c)](_0x38e901(0x137)),toastr['info'](_0x38e901(0x152)),document['getElementById'](_0x38e901(0x142))[_0x38e901(0x143)]=_0x38e901(0x11f)+totalCorrect+'\x20of\x20'+goalCorrect,document[_0x38e901(0x12c)](_0x38e901(0x11e))['style'][_0x38e901(0x12e)]='');return;}else guessesRemaining-=0x1,currentGuess=[],nextLetter=0x0,guessesRemaining===0x0&&(toastr[_0x38e901(0x119)](_0x38e901(0x14e)),toastr[_0x38e901(0x116)](_0x38e901(0x14d)+rightGuessString+'\x22'),toastr[_0x38e901(0x116)]('Click\x20\x27next\x20word\x27\x20to\x20clear\x20the\x20board\x20and\x20get\x20another\x20word'),document[_0x38e901(0x12c)](_0x38e901(0x142))[_0x38e901(0x143)]='Guessed:\x20'+totalCorrect+'\x20of\x20'+goalCorrect,document[_0x38e901(0x12c)]('next-board')[_0x38e901(0x10f)][_0x38e901(0x12e)]='');}function insertLetter(_0x19343f){const _0x4fb5c4=_0xeeb28c;if(nextLetter===0x5)return;_0x19343f=_0x19343f['toLowerCase']();let _0x48d80e=document[_0x4fb5c4(0x154)](_0x4fb5c4(0x114))[0x6-guessesRemaining],_0x121728=_0x48d80e[_0x4fb5c4(0x149)][nextLetter];animateCSS(_0x121728,'pulse'),_0x121728[_0x4fb5c4(0x135)]=_0x19343f,_0x121728[_0x4fb5c4(0x147)][_0x4fb5c4(0x139)](_0x4fb5c4(0x13f)),currentGuess['push'](_0x19343f),nextLetter+=0x1;}function sleep(_0x143981){const _0x5f5b65=_0xeeb28c;var _0x2aa695=new Date()[_0x5f5b65(0x151)]();while(new Date()[_0x5f5b65(0x151)]()<_0x2aa695+_0x143981){}}const animateCSS=(_0x4130b2,_0x5a9159,_0x2f4f52=_0xeeb28c(0x118))=>new Promise((_0x26121c,_0x4dde43)=>{const _0x279581=_0xeeb28c,_0x51ddb4=''+_0x2f4f52+_0x5a9159,_0xb7d824=_0x4130b2;_0xb7d824[_0x279581(0x10f)]['setProperty'](_0x279581(0x10c),_0x279581(0x127)),_0xb7d824[_0x279581(0x147)][_0x279581(0x139)](_0x2f4f52+_0x279581(0x128),_0x51ddb4);function _0x363dbe(_0x2ebe92){const _0x33ee3c=_0x279581;_0x2ebe92[_0x33ee3c(0x138)](),_0xb7d824[_0x33ee3c(0x147)][_0x33ee3c(0x12d)](_0x2f4f52+'animated',_0x51ddb4),_0x26121c(_0x33ee3c(0x10d));}_0xb7d824[_0x279581(0x131)](_0x279581(0x146),_0x363dbe,{'once':!![]});});document[_0xeeb28c(0x131)]('keyup',_0x255872=>{const _0x3ab83d=_0xeeb28c;if(guessesRemaining===0x0)return;let _0x33b0ea=String(_0x255872[_0x3ab83d(0x110)]);if(_0x33b0ea===_0x3ab83d(0x134)&&nextLetter!==0x0){deleteLetter();return;}if(_0x33b0ea===_0x3ab83d(0x112)){checkGuess();return;}let _0x38cd87=_0x33b0ea[_0x3ab83d(0x132)](/[a-z]/gi);if(!_0x38cd87||_0x38cd87[_0x3ab83d(0x148)]>0x1)return;else insertLetter(_0x33b0ea);}),document[_0xeeb28c(0x12c)]('keyboard-cont')[_0xeeb28c(0x131)](_0xeeb28c(0x140),_0x4c36f4=>{const _0x5df091=_0xeeb28c,_0x41c022=_0x4c36f4[_0x5df091(0x126)];if(!_0x41c022[_0x5df091(0x147)]['contains']('keyboard-button'))return;let _0x57df45=_0x41c022[_0x5df091(0x135)];_0x57df45===_0x5df091(0x115)&&(_0x57df45='Backspace'),document[_0x5df091(0x122)](new KeyboardEvent(_0x5df091(0x13a),{'key':_0x57df45}));}),document['getElementById'](_0xeeb28c(0x133))[_0xeeb28c(0x131)]('click',_0x2ae868=>{nextWord();}),initBoard();
+//https://www.obfuscator.io/
+
+import { TF } from "./tf.js";
+import { WL } from "./wl.js";
+import { WO } from "./words-org.js";
+
+const NUMBER_OF_GUESSES = 6;
+let totalCorrect = 0;
+let goalCorrect = 5;
+
+let guessesRemaining = NUMBER_OF_GUESSES;
+let currentGuess = [];
+let nextLetter = 0;
+let rightGuessString = WL[Math.floor(Math.random() * WL.length)]
+
+console.log(rightGuessString)
+
+function nextWord() {
+    document.getElementById("next-board").style.visibility = "hidden";
+    reInitBoard();
+}
+
+function initBoard() {
+    guessesRemaining = NUMBER_OF_GUESSES;
+    currentGuess = [];
+    nextLetter = 0;
+    rightGuessString = WL[Math.floor(Math.random() * WL.length)]
+    let board = document.getElementById("game-board");
+
+    for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
+        let row = document.createElement("div")
+        row.className = "letter-row"
+        
+        for (let j = 0; j < 5; j++) {
+            let box = document.createElement("div")
+            box.className = "letter-box"
+            row.appendChild(box)
+        }
+        board.appendChild(row)
+    }
+}
+
+function eraseBoard() {
+    let board = document.getElementById("game-board");
+    let boardrows = board.getElementsByClassName("letter-row");
+
+    let boardboxes =  board.getElementsByClassName("letter-box");
+    for (let i = boardboxes.length; i > 0; i--) {
+        try {
+            boardrows[0].remove(boardboxes[i]);
+        } catch (error) {
+        }  
+    }
+
+    boardboxes =  board.getElementsByClassName("letter-box box-filled");
+    for (let i = boardboxes.length; i > 0; i--) {
+        try {
+            boardrows[0].remove(boardboxes[i]);
+        } catch (error) {
+        }  
+    }
+}
+
+function reInitBoard() {
+    eraseBoard();
+    initKeyboard('white');
+    initBoard();
+}
+
+function initKeyboard(color) {
+    let letter =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+    for (let i = 0; i < letter.length; i++) {
+        shadeKeyBoard2(letter[i], color);
+    }
+}
+
+function shadeKeyBoard2(letter, color) {
+    for (const elem of document.getElementsByClassName("keyboard-button")) {
+        if (elem.textContent === letter) {
+           elem.style.backgroundColor = color
+        }
+    }
+}
+
+function shadeKeyBoard(letter, color) {
+    for (const elem of document.getElementsByClassName("keyboard-button")) {
+        if (elem.textContent === letter) {
+            let oldColor = elem.style.backgroundColor
+            if (oldColor === 'green') {
+                return
+            } 
+
+            if (oldColor === 'yellow' && color !== 'green') {
+                return
+            }
+
+            elem.style.backgroundColor = color
+            break
+        }
+    }
+}
+
+function deleteLetter () {
+    let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
+    let box = row.children[nextLetter - 1]
+    box.textContent = ""
+    box.classList.remove("filled-box")
+    currentGuess.pop()
+    nextLetter -= 1
+}
+
+function checkGuess () {
+    let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
+    let guessString = ''
+    let rightGuess = Array.from(rightGuessString)
+
+    for (const val of currentGuess) {
+        guessString += val
+    }
+
+    if (guessString.length != 5) {
+        toastr.error("Not enough letters!")
+        return
+    }
+
+    if (!WO.includes(guessString)) {
+        toastr.error("Word not in list!")
+        return
+    }
+
+    
+    for (let i = 0; i < 5; i++) {
+        let letterColor = ''
+        let box = row.children[i]
+        let letter = currentGuess[i]
+        
+        let letterPosition = rightGuess.indexOf(currentGuess[i])
+        // is letter in the correct guess
+        if (letterPosition === -1) {
+            letterColor = 'grey'
+        } else {
+            // now, letter is definitely in word
+            // if letter index and right guess index are the same
+            // letter is in the right position 
+            if (currentGuess[i] === rightGuess[i]) {
+                // shade green 
+                letterColor = 'green'
+            } else {
+                // shade box yellow
+                letterColor = 'yellow'
+            }
+
+            rightGuess[letterPosition] = "#"
+        }
+
+        let delay = 250 * i
+        setTimeout(()=> {
+            //flip box
+            animateCSS(box, 'flipInX')
+            //shade box
+            box.style.backgroundColor = letterColor
+            shadeKeyBoard(letter, letterColor)
+        }, delay)
+    }
+
+    if (guessString === rightGuessString) {
+        guessesRemaining = 0
+        totalCorrect++;
+        if ( totalCorrect === goalCorrect ) {
+            eraseBoard();
+            document.getElementById("next-board").style.visibility = "hidden";
+            toastr.success("Congratulations - You Captured The Flag!")
+            initKeyboard('green');
+            //sleep(2000);
+            document.getElementById("message").innerHTML = `F L A G: <br>${TF[Math.floor(Math.random() * TF.length)]}`;
+        } else {
+            toastr.success("You guessed right!")
+            toastr.info("Click 'next word' to clear the board and get another word")
+            document.getElementById("message").innerHTML = `Guessed: ${totalCorrect} of ${goalCorrect}`;
+            document.getElementById("next-board").style.visibility = "";
+        }
+        return
+    } else {
+        guessesRemaining -= 1;
+        currentGuess = [];
+        nextLetter = 0;
+
+        if (guessesRemaining === 0) {
+            toastr.error("You've run out of guesses!")
+            toastr.info(`The right word was: "${rightGuessString}"`)
+            toastr.info("Click 'next word' to clear the board and get another word")
+            document.getElementById("message").innerHTML = `Guessed: ${totalCorrect} of ${goalCorrect}`;
+            document.getElementById("next-board").style.visibility = "";
+        }
+    }
+}
+
+function insertLetter (pressedKey) {
+    if (nextLetter === 5) {
+        return
+    }
+    pressedKey = pressedKey.toLowerCase()
+
+    let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
+    let box = row.children[nextLetter]
+    animateCSS(box, "pulse")
+    box.textContent = pressedKey
+    box.classList.add("filled-box")
+    currentGuess.push(pressedKey)
+    nextLetter += 1
+}
+
+function sleep(ms) {
+    //return new Promise(resolve => setTimeout(resolve, ms));
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + ms){ 
+        /* Do nothing */ 
+    }
+}
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    // const node = document.querySelector(element);
+    const node = element
+    node.style.setProperty('--animate-duration', '0.1s');
+    
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+});
+
+document.addEventListener("keyup", (e) => {
+
+    if (guessesRemaining === 0) {
+        return
+    }
+
+    let pressedKey = String(e.key)
+    if (pressedKey === "Backspace" && nextLetter !== 0) {
+        deleteLetter()
+        return
+    }
+
+    if (pressedKey === "Enter") {
+        checkGuess()
+        return
+    }
+
+    let found = pressedKey.match(/[a-z]/gi)
+    if (!found || found.length > 1) {
+        return
+    } else {
+        insertLetter(pressedKey)
+    }
+})
+
+document.getElementById("keyboard-cont").addEventListener("click", (e) => {
+    const target = e.target
+    
+    if (!target.classList.contains("keyboard-button")) {
+        return
+    }
+    let key = target.textContent
+
+    if (key === "Del") {
+        key = "Backspace"
+    } 
+
+    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
+})
+
+document.getElementById("next-word").addEventListener("click", (e) => {
+    nextWord();
+})
+
+initBoard();
