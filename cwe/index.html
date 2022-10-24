@@ -261,7 +261,7 @@
                 }
             }
             function checkVersion() {
-                var current = 4.8;
+                var current = 4.9;
                 let xmlHttpReq = new XMLHttpRequest();
                 xmlHttpReq.open("GET", "https://cwe.mitre.org/data/index.html", false); 
                 xmlHttpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -279,7 +279,7 @@
     <center>
     <table>
     <tr><td colspan="2" align="center"><b>CWETree</b></td></tr>
-    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.8 (2022-06-28)</b></td></tr>
+    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.9 (2022-10-13)</b></td></tr>
     <!-- <tr><td>&nbsp;</td><td td align="right"><input type="button" onclick="checkVersion();" id="versionBTN" value="Check Version"/></td></tr> -->
     <tr><td><b>TOTAL</b> Number of CWE Weaknesses:</td><td align="right" id="cweIDCountDisplay"></td></tr>
     <tr><td>Number of Deprecated CWE Weaknesses:</td><td align="right" id="cweIDCountStatusDeprecatedDisplay"></td></tr>
@@ -350,35 +350,7 @@
 <li><input type="checkbox" id="249" name="249" value="249" onclick="checkTree('249');"><span class="caret"><span id="div249" class="cwedata" data-hover="CWE-249:DEPRECATED: Often Misused: Path Manipulation -- This entry has been deprecated because of name
 	confusion and an accidental combination of multiple
 	weaknesses. Most of its content has been transferred to
-	CWE-785.
-
-        This entry was deprecated for several reasons. The primary
-        reason is over-loading of the "path manipulation" term and the
-        description. The original description for this entry was the
-        same as that for the "Often Misused: File System" item in the
-        original Seven Pernicious Kingdoms paper. However, Seven
-        Pernicious Kingdoms also has a "Path Manipulation" phrase that
-        is for external control of pathnames (CWE-73), which is a
-        factor in symbolic link following and path traversal, neither
-        of which is explicitly mentioned in 7PK. Fortify uses the
-        phrase "Often Misused: Path Manipulation" for a broader range
-        of problems, generally for issues related to buffer
-        management. Given the multiple conflicting uses of this term,
-        there is a chance that CWE users may have incorrectly mapped
-        to this entry.
-
-	The second reason for deprecation is an implied combination of
-	multiple weaknesses within buffer-handling functions. The
-	focus of this entry was generally on the path-conversion
-	functions and their association with buffer
-	overflows. However, some of Fortify's Vulncat entries have the
-	term "path manipulation" but describe a non-overflow weakness
-	in which the buffer is not guaranteed to contain the entire
-	pathname, i.e., there is information truncation (see CWE-222
-	for a similar concept). A new entry for this non-overflow
-	weakness may be created in a future version of CWE.
-	 
-	 "><a href="https://cwe.mitre.org/data/definitions/249.html" target="_blank">CWE-249</a>:DEPRECATED: Often Misused: Path Manipulation</span></span>
+	CWE-785."><a href="https://cwe.mitre.org/data/definitions/249.html" target="_blank">CWE-249</a>:DEPRECATED: Often Misused: Path Manipulation</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -640,38 +612,6 @@
 </li>
 <li><input type="checkbox" id="284:287" name="284:287" value="284:287" onclick="checkTree('284:287');"><span class="caret"><span id="div284:287" class="cwedata" data-hover="CWE-287:Improper Authentication -- When an actor claims to have a given identity, the software does not prove or insufficiently proves that the claim is correct."><a href="https://cwe.mitre.org/data/definitions/287.html" target="_blank">CWE-287</a>:Improper Authentication</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="284:287:261" name="284:287:261" value="284:287:261" onclick="checkTree('284:287:261');"><span class="caret"><span id="div284:287:261" class="cwedata" data-hover="CWE-261:Weak Encoding for Password -- Obscuring a password with a trivial encoding does not protect the password."><a href="https://cwe.mitre.org/data/definitions/261.html" target="_blank">CWE-261</a>:Weak Encoding for Password</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:262" name="284:287:262" value="284:287:262" onclick="checkTree('284:287:262');"><span class="caret"><span id="div284:287:262" class="cwedata" data-hover="CWE-262:Not Using Password Aging -- If no mechanism is in place for managing password aging, users will have no incentive to update passwords in a timely manner."><a href="https://cwe.mitre.org/data/definitions/262.html" target="_blank">CWE-262</a>:Not Using Password Aging</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:263" name="284:287:263" value="284:287:263" onclick="checkTree('284:287:263');"><span class="caret"><span id="div284:287:263" class="cwedata" data-hover="CWE-263:Password Aging with Long Expiration -- Allowing password aging to occur unchecked can result in the possibility of diminished password integrity."><a href="https://cwe.mitre.org/data/definitions/263.html" target="_blank">CWE-263</a>:Password Aging with Long Expiration</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:288" name="284:287:288" value="284:287:288" onclick="checkTree('284:287:288');"><span class="caret"><span id="div284:287:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- A product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel</span></span>
-<ul class="nested">
-<li><input type="checkbox" id="284:287:288:425" name="284:287:288:425" value="284:287:288:425" onclick="checkTree('284:287:288:425');"><span class="caret"><span id="div284:287:288:425" class="cwedata" data-hover="CWE-425:Direct Request ('Forced Browsing') -- The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."><a href="https://cwe.mitre.org/data/definitions/425.html" target="_blank">CWE-425</a>:Direct Request ('Forced Browsing')</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:288:1299" name="284:287:288:1299" value="284:287:288:1299" onclick="checkTree('284:287:288:1299');"><span class="caret"><span id="div284:287:288:1299" class="cwedata" data-hover="CWE-1299:Missing Protection Mechanism for Alternate Hardware Interface -- The lack of protections on alternate paths to access
-                control-protected assets (such as unprotected shadow registers
-                and other external facing unguarded interfaces) allows an
-                attacker to bypass existing protections to the asset that are
-		only performed against the primary path."><a href="https://cwe.mitre.org/data/definitions/1299.html" target="_blank">CWE-1299</a>:Missing Protection Mechanism for Alternate Hardware Interface</span></span>
-<ul class="nested">
-</ul>
-</li>
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:289" name="284:287:289" value="284:287:289" onclick="checkTree('284:287:289');"><span class="caret"><span id="div284:287:289" class="cwedata" data-hover="CWE-289:Authentication Bypass by Alternate Name -- The software performs authentication based on the name of a resource being accessed, or the name of the actor performing the access, but it does not properly check all possible names for that resource or actor."><a href="https://cwe.mitre.org/data/definitions/289.html" target="_blank">CWE-289</a>:Authentication Bypass by Alternate Name</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="284:287:290" name="284:287:290" value="284:287:290" onclick="checkTree('284:287:290');"><span class="caret"><span id="div284:287:290" class="cwedata" data-hover="CWE-290:Authentication Bypass by Spoofing -- This attack-focused weakness is caused by improperly implemented authentication schemes that are subject to spoofing attacks."><a href="https://cwe.mitre.org/data/definitions/290.html" target="_blank">CWE-290</a>:Authentication Bypass by Spoofing</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="284:287:290:291" name="284:287:290:291" value="284:287:290:291" onclick="checkTree('284:287:290:291');"><span class="caret"><span id="div284:287:290:291" class="cwedata" data-hover="CWE-291:Reliance on IP Address for Authentication -- The software uses an IP address for authentication."><a href="https://cwe.mitre.org/data/definitions/291.html" target="_blank">CWE-291</a>:Reliance on IP Address for Authentication</span></span>
@@ -720,39 +660,27 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:301" name="284:287:301" value="284:287:301" onclick="checkTree('284:287:301');"><span class="caret"><span id="div284:287:301" class="cwedata" data-hover="CWE-301:Reflection Attack in an Authentication Protocol -- Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user."><a href="https://cwe.mitre.org/data/definitions/301.html" target="_blank">CWE-301</a>:Reflection Attack in an Authentication Protocol</span></span>
+<li><input type="checkbox" id="284:287:306" name="284:287:306" value="284:287:306" onclick="checkTree('284:287:306');"><span class="caret"><span id="div284:287:306" class="cwedata" data-hover="CWE-306:Missing Authentication for Critical Function -- The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources."><a href="https://cwe.mitre.org/data/definitions/306.html" target="_blank">CWE-306</a>:Missing Authentication for Critical Function</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:306:288" name="284:287:306:288" value="284:287:306:288" onclick="checkTree('284:287:306:288');"><span class="caret"><span id="div284:287:306:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- A product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:306:288:425" name="284:287:306:288:425" value="284:287:306:288:425" onclick="checkTree('284:287:306:288:425');"><span class="caret"><span id="div284:287:306:288:425" class="cwedata" data-hover="CWE-425:Direct Request ('Forced Browsing') -- The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."><a href="https://cwe.mitre.org/data/definitions/425.html" target="_blank">CWE-425</a>:Direct Request ('Forced Browsing')</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:302" name="284:287:302" value="284:287:302" onclick="checkTree('284:287:302');"><span class="caret"><span id="div284:287:302" class="cwedata" data-hover="CWE-302:Authentication Bypass by Assumed-Immutable Data -- The authentication scheme or implementation uses key data elements that are assumed to be immutable, but can be controlled or modified by the attacker."><a href="https://cwe.mitre.org/data/definitions/302.html" target="_blank">CWE-302</a>:Authentication Bypass by Assumed-Immutable Data</span></span>
+<li><input type="checkbox" id="284:287:306:288:1299" name="284:287:306:288:1299" value="284:287:306:288:1299" onclick="checkTree('284:287:306:288:1299');"><span class="caret"><span id="div284:287:306:288:1299" class="cwedata" data-hover="CWE-1299:Missing Protection Mechanism for Alternate Hardware Interface -- The lack of protections on alternate paths to access
+                control-protected assets (such as unprotected shadow registers
+                and other external facing unguarded interfaces) allows an
+                attacker to bypass existing protections to the asset that are
+		only performed against the primary path."><a href="https://cwe.mitre.org/data/definitions/1299.html" target="_blank">CWE-1299</a>:Missing Protection Mechanism for Alternate Hardware Interface</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:303" name="284:287:303" value="284:287:303" onclick="checkTree('284:287:303');"><span class="caret"><span id="div284:287:303" class="cwedata" data-hover="CWE-303:Incorrect Implementation of Authentication Algorithm -- The requirements for the software dictate the use of an established authentication algorithm, but the implementation of the algorithm is incorrect."><a href="https://cwe.mitre.org/data/definitions/303.html" target="_blank">CWE-303</a>:Incorrect Implementation of Authentication Algorithm</span></span>
-<ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:304" name="284:287:304" value="284:287:304" onclick="checkTree('284:287:304');"><span class="caret"><span id="div284:287:304" class="cwedata" data-hover="CWE-304:Missing Critical Step in Authentication -- The software implements an authentication technique, but it skips a step that weakens the technique."><a href="https://cwe.mitre.org/data/definitions/304.html" target="_blank">CWE-304</a>:Missing Critical Step in Authentication</span></span>
-<ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:305" name="284:287:305" value="284:287:305" onclick="checkTree('284:287:305');"><span class="caret"><span id="div284:287:305" class="cwedata" data-hover="CWE-305:Authentication Bypass by Primary Weakness -- The authentication algorithm is sound, but the implemented mechanism can be bypassed as the result of a separate weakness that is primary to the authentication error."><a href="https://cwe.mitre.org/data/definitions/305.html" target="_blank">CWE-305</a>:Authentication Bypass by Primary Weakness</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:306" name="284:287:306" value="284:287:306" onclick="checkTree('284:287:306');"><span class="caret"><span id="div284:287:306" class="cwedata" data-hover="CWE-306:Missing Authentication for Critical Function -- The software does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources."><a href="https://cwe.mitre.org/data/definitions/306.html" target="_blank">CWE-306</a>:Missing Authentication for Critical Function</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:307" name="284:287:307" value="284:287:307" onclick="checkTree('284:287:307');"><span class="caret"><span id="div284:287:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The software does not implement sufficient measures to prevent multiple failed authentication attempts within in a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:308" name="284:287:308" value="284:287:308" onclick="checkTree('284:287:308');"><span class="caret"><span id="div284:287:308" class="cwedata" data-hover="CWE-308:Use of Single-factor Authentication -- The use of single-factor authentication can lead to unnecessary risk of compromise when compared with the benefits of a dual-factor authentication scheme."><a href="https://cwe.mitre.org/data/definitions/308.html" target="_blank">CWE-308</a>:Use of Single-factor Authentication</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:309" name="284:287:309" value="284:287:309" onclick="checkTree('284:287:309');"><span class="caret"><span id="div284:287:309" class="cwedata" data-hover="CWE-309:Use of Password System for Primary Authentication -- The use of password systems as the primary means of authentication may be subject to several flaws or shortcomings, each reducing the effectiveness of the mechanism."><a href="https://cwe.mitre.org/data/definitions/309.html" target="_blank">CWE-309</a>:Use of Password System for Primary Authentication</span></span>
+<li><input type="checkbox" id="284:287:307" name="284:287:307" value="284:287:307" onclick="checkTree('284:287:307');"><span class="caret"><span id="div284:287:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -800,18 +728,6 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:593" name="284:287:593" value="284:287:593" onclick="checkTree('284:287:593');"><span class="caret"><span id="div284:287:593" class="cwedata" data-hover="CWE-593:Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created -- The software modifies the SSL context after connection creation has begun."><a href="https://cwe.mitre.org/data/definitions/593.html" target="_blank">CWE-593</a>:Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:603" name="284:287:603" value="284:287:603" onclick="checkTree('284:287:603');"><span class="caret"><span id="div284:287:603" class="cwedata" data-hover="CWE-603:Use of Client-Side Authentication -- A client/server product performs authentication within client code but not in server code, allowing server-side authentication to be bypassed via a modified client that omits the authentication check."><a href="https://cwe.mitre.org/data/definitions/603.html" target="_blank">CWE-603</a>:Use of Client-Side Authentication</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="284:287:620" name="284:287:620" value="284:287:620" onclick="checkTree('284:287:620');"><span class="caret"><span id="div284:287:620" class="cwedata" data-hover="CWE-620:Unverified Password Change -- When setting a new password for a user, the product does not require knowledge of the original password, or using another form of authentication."><a href="https://cwe.mitre.org/data/definitions/620.html" target="_blank">CWE-620</a>:Unverified Password Change</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="284:287:640" name="284:287:640" value="284:287:640" onclick="checkTree('284:287:640');"><span class="caret"><span id="div284:287:640" class="cwedata" data-hover="CWE-640:Weak Password Recovery Mechanism for Forgotten Password -- The software contains a mechanism for users to recover or change their passwords without knowing the original password, but the mechanism is weak."><a href="https://cwe.mitre.org/data/definitions/640.html" target="_blank">CWE-640</a>:Weak Password Recovery Mechanism for Forgotten Password</span></span>
 <ul class="nested">
 </ul>
@@ -832,12 +748,172 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:804" name="284:287:804" value="284:287:804" onclick="checkTree('284:287:804');"><span class="caret"><span id="div284:287:804" class="cwedata" data-hover="CWE-804:Guessable CAPTCHA -- The software uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor."><a href="https://cwe.mitre.org/data/definitions/804.html" target="_blank">CWE-804</a>:Guessable CAPTCHA</span></span>
+<li><input type="checkbox" id="284:287:1390" name="284:287:1390" value="284:287:1390" onclick="checkTree('284:287:1390');"><span class="caret"><span id="div284:287:1390" class="cwedata" data-hover="CWE-1390:Weak Authentication -- The product uses an authentication mechanism to restrict access to specific users or identities, but the mechanism does not sufficiently prove that the claimed identity is correct."><a href="https://cwe.mitre.org/data/definitions/1390.html" target="_blank">CWE-1390</a>:Weak Authentication</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:261" name="284:287:1390:261" value="284:287:1390:261" onclick="checkTree('284:287:1390:261');"><span class="caret"><span id="div284:287:1390:261" class="cwedata" data-hover="CWE-261:Weak Encoding for Password -- Obscuring a password with a trivial encoding does not protect the password."><a href="https://cwe.mitre.org/data/definitions/261.html" target="_blank">CWE-261</a>:Weak Encoding for Password</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:836" name="284:287:836" value="284:287:836" onclick="checkTree('284:287:836');"><span class="caret"><span id="div284:287:836" class="cwedata" data-hover="CWE-836:Use of Password Hash Instead of Password for Authentication -- The software records password hashes in a data store, receives a hash of a password from a client, and compares the supplied hash to the hash obtained from the data store."><a href="https://cwe.mitre.org/data/definitions/836.html" target="_blank">CWE-836</a>:Use of Password Hash Instead of Password for Authentication</span></span>
+<li><input type="checkbox" id="284:287:1390:262" name="284:287:1390:262" value="284:287:1390:262" onclick="checkTree('284:287:1390:262');"><span class="caret"><span id="div284:287:1390:262" class="cwedata" data-hover="CWE-262:Not Using Password Aging -- The product does not have a mechanism in place for managing password aging."><a href="https://cwe.mitre.org/data/definitions/262.html" target="_blank">CWE-262</a>:Not Using Password Aging</span></span>
 <ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:263" name="284:287:1390:263" value="284:287:1390:263" onclick="checkTree('284:287:1390:263');"><span class="caret"><span id="div284:287:1390:263" class="cwedata" data-hover="CWE-263:Password Aging with Long Expiration -- The product supports password aging, but the expiration period is too long."><a href="https://cwe.mitre.org/data/definitions/263.html" target="_blank">CWE-263</a>:Password Aging with Long Expiration</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:289" name="284:287:1390:289" value="284:287:1390:289" onclick="checkTree('284:287:1390:289');"><span class="caret"><span id="div284:287:1390:289" class="cwedata" data-hover="CWE-289:Authentication Bypass by Alternate Name -- The software performs authentication based on the name of a resource being accessed, or the name of the actor performing the access, but it does not properly check all possible names for that resource or actor."><a href="https://cwe.mitre.org/data/definitions/289.html" target="_blank">CWE-289</a>:Authentication Bypass by Alternate Name</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:290" name="284:287:1390:290" value="284:287:1390:290" onclick="checkTree('284:287:1390:290');"><span class="caret"><span id="div284:287:1390:290" class="cwedata" data-hover="CWE-290:Authentication Bypass by Spoofing -- This attack-focused weakness is caused by improperly implemented authentication schemes that are subject to spoofing attacks."><a href="https://cwe.mitre.org/data/definitions/290.html" target="_blank">CWE-290</a>:Authentication Bypass by Spoofing</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:290:291" name="284:287:1390:290:291" value="284:287:1390:290:291" onclick="checkTree('284:287:1390:290:291');"><span class="caret"><span id="div284:287:1390:290:291" class="cwedata" data-hover="CWE-291:Reliance on IP Address for Authentication -- The software uses an IP address for authentication."><a href="https://cwe.mitre.org/data/definitions/291.html" target="_blank">CWE-291</a>:Reliance on IP Address for Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:290:293" name="284:287:1390:290:293" value="284:287:1390:290:293" onclick="checkTree('284:287:1390:290:293');"><span class="caret"><span id="div284:287:1390:290:293" class="cwedata" data-hover="CWE-293:Using Referer Field for Authentication -- The referer field in HTTP requests can be easily modified and, as such, is not a valid means of message integrity checking."><a href="https://cwe.mitre.org/data/definitions/293.html" target="_blank">CWE-293</a>:Using Referer Field for Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:290:350" name="284:287:1390:290:350" value="284:287:1390:290:350" onclick="checkTree('284:287:1390:290:350');"><span class="caret"><span id="div284:287:1390:290:350" class="cwedata" data-hover="CWE-350:Reliance on Reverse DNS Resolution for a Security-Critical Action -- The software performs reverse DNS resolution on an IP address to obtain the hostname and make a security decision, but it does not properly ensure that the IP address is truly associated with the hostname."><a href="https://cwe.mitre.org/data/definitions/350.html" target="_blank">CWE-350</a>:Reliance on Reverse DNS Resolution for a Security-Critical Action</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:294" name="284:287:1390:294" value="284:287:1390:294" onclick="checkTree('284:287:1390:294');"><span class="caret"><span id="div284:287:1390:294" class="cwedata" data-hover="CWE-294:Authentication Bypass by Capture-replay -- A capture-replay flaw exists when the design of the software makes it possible for a malicious user to sniff network traffic and bypass authentication by replaying it to the server in question to the same effect as the original message (or with minor changes)."><a href="https://cwe.mitre.org/data/definitions/294.html" target="_blank">CWE-294</a>:Authentication Bypass by Capture-replay</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:301" name="284:287:1390:301" value="284:287:1390:301" onclick="checkTree('284:287:1390:301');"><span class="caret"><span id="div284:287:1390:301" class="cwedata" data-hover="CWE-301:Reflection Attack in an Authentication Protocol -- Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user."><a href="https://cwe.mitre.org/data/definitions/301.html" target="_blank">CWE-301</a>:Reflection Attack in an Authentication Protocol</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:302" name="284:287:1390:302" value="284:287:1390:302" onclick="checkTree('284:287:1390:302');"><span class="caret"><span id="div284:287:1390:302" class="cwedata" data-hover="CWE-302:Authentication Bypass by Assumed-Immutable Data -- The authentication scheme or implementation uses key data elements that are assumed to be immutable, but can be controlled or modified by the attacker."><a href="https://cwe.mitre.org/data/definitions/302.html" target="_blank">CWE-302</a>:Authentication Bypass by Assumed-Immutable Data</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:303" name="284:287:1390:303" value="284:287:1390:303" onclick="checkTree('284:287:1390:303');"><span class="caret"><span id="div284:287:1390:303" class="cwedata" data-hover="CWE-303:Incorrect Implementation of Authentication Algorithm -- The requirements for the software dictate the use of an established authentication algorithm, but the implementation of the algorithm is incorrect."><a href="https://cwe.mitre.org/data/definitions/303.html" target="_blank">CWE-303</a>:Incorrect Implementation of Authentication Algorithm</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:304" name="284:287:1390:304" value="284:287:1390:304" onclick="checkTree('284:287:1390:304');"><span class="caret"><span id="div284:287:1390:304" class="cwedata" data-hover="CWE-304:Missing Critical Step in Authentication -- The software implements an authentication technique, but it skips a step that weakens the technique."><a href="https://cwe.mitre.org/data/definitions/304.html" target="_blank">CWE-304</a>:Missing Critical Step in Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:305" name="284:287:1390:305" value="284:287:1390:305" onclick="checkTree('284:287:1390:305');"><span class="caret"><span id="div284:287:1390:305" class="cwedata" data-hover="CWE-305:Authentication Bypass by Primary Weakness -- The authentication algorithm is sound, but the implemented mechanism can be bypassed as the result of a separate weakness that is primary to the authentication error."><a href="https://cwe.mitre.org/data/definitions/305.html" target="_blank">CWE-305</a>:Authentication Bypass by Primary Weakness</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:307" name="284:287:1390:307" value="284:287:1390:307" onclick="checkTree('284:287:1390:307');"><span class="caret"><span id="div284:287:1390:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:308" name="284:287:1390:308" value="284:287:1390:308" onclick="checkTree('284:287:1390:308');"><span class="caret"><span id="div284:287:1390:308" class="cwedata" data-hover="CWE-308:Use of Single-factor Authentication -- The use of single-factor authentication can lead to unnecessary risk of compromise when compared with the benefits of a dual-factor authentication scheme."><a href="https://cwe.mitre.org/data/definitions/308.html" target="_blank">CWE-308</a>:Use of Single-factor Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:309" name="284:287:1390:309" value="284:287:1390:309" onclick="checkTree('284:287:1390:309');"><span class="caret"><span id="div284:287:1390:309" class="cwedata" data-hover="CWE-309:Use of Password System for Primary Authentication -- The use of password systems as the primary means of authentication may be subject to several flaws or shortcomings, each reducing the effectiveness of the mechanism."><a href="https://cwe.mitre.org/data/definitions/309.html" target="_blank">CWE-309</a>:Use of Password System for Primary Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522" name="284:287:1390:522" value="284:287:1390:522" onclick="checkTree('284:287:1390:522');"><span class="caret"><span id="div284:287:1390:522" class="cwedata" data-hover="CWE-522:Insufficiently Protected Credentials -- The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."><a href="https://cwe.mitre.org/data/definitions/522.html" target="_blank">CWE-522</a>:Insufficiently Protected Credentials</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:522:256" name="284:287:1390:522:256" value="284:287:1390:522:256" onclick="checkTree('284:287:1390:522:256');"><span class="caret"><span id="div284:287:1390:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- Storing a password in plaintext may result in a system compromise."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:257" name="284:287:1390:522:257" value="284:287:1390:522:257" onclick="checkTree('284:287:1390:522:257');"><span class="caret"><span id="div284:287:1390:522:257" class="cwedata" data-hover="CWE-257:Storing Passwords in a Recoverable Format -- The storage of passwords in a recoverable format makes them subject to password reuse attacks by malicious users. In fact, it should be noted that recoverable encrypted passwords provide no significant benefit over plaintext passwords since they are subject not only to reuse by malicious attackers but also by malicious insiders. If a system administrator can recover a password directly, or use a brute force search on the available information, the administrator can use the password on other accounts."><a href="https://cwe.mitre.org/data/definitions/257.html" target="_blank">CWE-257</a>:Storing Passwords in a Recoverable Format</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:260" name="284:287:1390:522:260" value="284:287:1390:522:260" onclick="checkTree('284:287:1390:522:260');"><span class="caret"><span id="div284:287:1390:522:260" class="cwedata" data-hover="CWE-260:Password in Configuration File -- The software stores a password in a configuration file that might be accessible to actors who do not know the password."><a href="https://cwe.mitre.org/data/definitions/260.html" target="_blank">CWE-260</a>:Password in Configuration File</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:522:260:13" name="284:287:1390:522:260:13" value="284:287:1390:522:260:13" onclick="checkTree('284:287:1390:522:260:13');"><span class="caret"><span id="div284:287:1390:522:260:13" class="cwedata" data-hover="CWE-13:ASP.NET Misconfiguration: Password in Configuration File -- Storing a plaintext password in a configuration file allows anyone who can read the file access to the password-protected resource making them an easy target for attackers."><a href="https://cwe.mitre.org/data/definitions/13.html" target="_blank">CWE-13</a>:ASP.NET Misconfiguration: Password in Configuration File</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:260:258" name="284:287:1390:522:260:258" value="284:287:1390:522:260:258" onclick="checkTree('284:287:1390:522:260:258');"><span class="caret"><span id="div284:287:1390:522:260:258" class="cwedata" data-hover="CWE-258:Empty Password in Configuration File -- Using an empty string as a password is insecure."><a href="https://cwe.mitre.org/data/definitions/258.html" target="_blank">CWE-258</a>:Empty Password in Configuration File</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:260:555" name="284:287:1390:522:260:555" value="284:287:1390:522:260:555" onclick="checkTree('284:287:1390:522:260:555');"><span class="caret"><span id="div284:287:1390:522:260:555" class="cwedata" data-hover="CWE-555:J2EE Misconfiguration: Plaintext Password in Configuration File -- The J2EE application stores a plaintext password in a configuration file."><a href="https://cwe.mitre.org/data/definitions/555.html" target="_blank">CWE-555</a>:J2EE Misconfiguration: Plaintext Password in Configuration File</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:523" name="284:287:1390:522:523" value="284:287:1390:522:523" onclick="checkTree('284:287:1390:522:523');"><span class="caret"><span id="div284:287:1390:522:523" class="cwedata" data-hover="CWE-523:Unprotected Transport of Credentials -- Login pages do not use adequate measures to protect the user name and password while they are in transit from the client to the server."><a href="https://cwe.mitre.org/data/definitions/523.html" target="_blank">CWE-523</a>:Unprotected Transport of Credentials</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:522:549" name="284:287:1390:522:549" value="284:287:1390:522:549" onclick="checkTree('284:287:1390:522:549');"><span class="caret"><span id="div284:287:1390:522:549" class="cwedata" data-hover="CWE-549:Missing Password Field Masking -- The software does not mask passwords during entry, increasing the potential for attackers to observe and capture passwords."><a href="https://cwe.mitre.org/data/definitions/549.html" target="_blank">CWE-549</a>:Missing Password Field Masking</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:593" name="284:287:1390:593" value="284:287:1390:593" onclick="checkTree('284:287:1390:593');"><span class="caret"><span id="div284:287:1390:593" class="cwedata" data-hover="CWE-593:Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created -- The software modifies the SSL context after connection creation has begun."><a href="https://cwe.mitre.org/data/definitions/593.html" target="_blank">CWE-593</a>:Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:603" name="284:287:1390:603" value="284:287:1390:603" onclick="checkTree('284:287:1390:603');"><span class="caret"><span id="div284:287:1390:603" class="cwedata" data-hover="CWE-603:Use of Client-Side Authentication -- A client/server product performs authentication within client code but not in server code, allowing server-side authentication to be bypassed via a modified client that omits the authentication check."><a href="https://cwe.mitre.org/data/definitions/603.html" target="_blank">CWE-603</a>:Use of Client-Side Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:620" name="284:287:1390:620" value="284:287:1390:620" onclick="checkTree('284:287:1390:620');"><span class="caret"><span id="div284:287:1390:620" class="cwedata" data-hover="CWE-620:Unverified Password Change -- When setting a new password for a user, the product does not require knowledge of the original password, or using another form of authentication."><a href="https://cwe.mitre.org/data/definitions/620.html" target="_blank">CWE-620</a>:Unverified Password Change</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:640" name="284:287:1390:640" value="284:287:1390:640" onclick="checkTree('284:287:1390:640');"><span class="caret"><span id="div284:287:1390:640" class="cwedata" data-hover="CWE-640:Weak Password Recovery Mechanism for Forgotten Password -- The software contains a mechanism for users to recover or change their passwords without knowing the original password, but the mechanism is weak."><a href="https://cwe.mitre.org/data/definitions/640.html" target="_blank">CWE-640</a>:Weak Password Recovery Mechanism for Forgotten Password</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:804" name="284:287:1390:804" value="284:287:1390:804" onclick="checkTree('284:287:1390:804');"><span class="caret"><span id="div284:287:1390:804" class="cwedata" data-hover="CWE-804:Guessable CAPTCHA -- The software uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor."><a href="https://cwe.mitre.org/data/definitions/804.html" target="_blank">CWE-804</a>:Guessable CAPTCHA</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:836" name="284:287:1390:836" value="284:287:1390:836" onclick="checkTree('284:287:1390:836');"><span class="caret"><span id="div284:287:1390:836" class="cwedata" data-hover="CWE-836:Use of Password Hash Instead of Password for Authentication -- The software records password hashes in a data store, receives a hash of a password from a client, and compares the supplied hash to the hash obtained from the data store."><a href="https://cwe.mitre.org/data/definitions/836.html" target="_blank">CWE-836</a>:Use of Password Hash Instead of Password for Authentication</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:1391" name="284:287:1390:1391" value="284:287:1390:1391" onclick="checkTree('284:287:1390:1391');"><span class="caret"><span id="div284:287:1390:1391" class="cwedata" data-hover="CWE-1391:Use of Weak Credentials -- The product uses weak credentials (such as a default key or hard-coded password) that can be calculated, derived, reused, or guessed by an attacker."><a href="https://cwe.mitre.org/data/definitions/1391.html" target="_blank">CWE-1391</a>:Use of Weak Credentials</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:1391:521" name="284:287:1390:1391:521" value="284:287:1390:1391:521" onclick="checkTree('284:287:1390:1391:521');"><span class="caret"><span id="div284:287:1390:1391:521" class="cwedata" data-hover="CWE-521:Weak Password Requirements -- The product does not require that users should have strong passwords, which makes it easier for attackers to compromise user accounts."><a href="https://cwe.mitre.org/data/definitions/521.html" target="_blank">CWE-521</a>:Weak Password Requirements</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:1391:521:258" name="284:287:1390:1391:521:258" value="284:287:1390:1391:521:258" onclick="checkTree('284:287:1390:1391:521:258');"><span class="caret"><span id="div284:287:1390:1391:521:258" class="cwedata" data-hover="CWE-258:Empty Password in Configuration File -- Using an empty string as a password is insecure."><a href="https://cwe.mitre.org/data/definitions/258.html" target="_blank">CWE-258</a>:Empty Password in Configuration File</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:1391:798" name="284:287:1390:1391:798" value="284:287:1390:1391:798" onclick="checkTree('284:287:1390:1391:798');"><span class="caret"><span id="div284:287:1390:1391:798" class="cwedata" data-hover="CWE-798:Use of Hard-coded Credentials -- The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data."><a href="https://cwe.mitre.org/data/definitions/798.html" target="_blank">CWE-798</a>:Use of Hard-coded Credentials</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:1391:798:259" name="284:287:1390:1391:798:259" value="284:287:1390:1391:798:259" onclick="checkTree('284:287:1390:1391:798:259');"><span class="caret"><span id="div284:287:1390:1391:798:259" class="cwedata" data-hover="CWE-259:Use of Hard-coded Password -- The software contains a hard-coded password, which it uses for its own inbound authentication or for outbound communication to external components."><a href="https://cwe.mitre.org/data/definitions/259.html" target="_blank">CWE-259</a>:Use of Hard-coded Password</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:1391:798:321" name="284:287:1390:1391:798:321" value="284:287:1390:1391:798:321" onclick="checkTree('284:287:1390:1391:798:321');"><span class="caret"><span id="div284:287:1390:1391:798:321" class="cwedata" data-hover="CWE-321:Use of Hard-coded Cryptographic Key -- The use of a hard-coded cryptographic key significantly increases the possibility that encrypted data may be recovered."><a href="https://cwe.mitre.org/data/definitions/321.html" target="_blank">CWE-321</a>:Use of Hard-coded Cryptographic Key</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:1391:1392" name="284:287:1390:1391:1392" value="284:287:1390:1391:1392" onclick="checkTree('284:287:1390:1391:1392');"><span class="caret"><span id="div284:287:1390:1391:1392" class="cwedata" data-hover="CWE-1392:Use of Default Credentials -- The product uses default credentials (such as passwords or cryptographic keys) for potentially critical functionality."><a href="https://cwe.mitre.org/data/definitions/1392.html" target="_blank">CWE-1392</a>:Use of Default Credentials</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:287:1390:1391:1392:1393" name="284:287:1390:1391:1392:1393" value="284:287:1390:1391:1392:1393" onclick="checkTree('284:287:1390:1391:1392:1393');"><span class="caret"><span id="div284:287:1390:1391:1392:1393" class="cwedata" data-hover="CWE-1393:Use of Default Password -- The product uses default passwords for potentially critical functionality."><a href="https://cwe.mitre.org/data/definitions/1393.html" target="_blank">CWE-1393</a>:Use of Default Password</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="284:287:1390:1391:1392:1394" name="284:287:1390:1391:1392:1394" value="284:287:1390:1391:1392:1394" onclick="checkTree('284:287:1390:1391:1392:1394');"><span class="caret"><span id="div284:287:1390:1391:1392:1394" class="cwedata" data-hover="CWE-1394:Use of Default Cryptographic Key -- The product uses a default cryptographic key for potentially critical functionality."><a href="https://cwe.mitre.org/data/definitions/1394.html" target="_blank">CWE-1394</a>:Use of Default Cryptographic Key</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -960,10 +1036,6 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:923:350" name="284:923:350" value="284:923:350" onclick="checkTree('284:923:350');"><span class="caret"><span id="div284:923:350" class="cwedata" data-hover="CWE-350:Reliance on Reverse DNS Resolution for a Security-Critical Action -- The software performs reverse DNS resolution on an IP address to obtain the hostname and make a security decision, but it does not properly ensure that the IP address is truly associated with the hostname."><a href="https://cwe.mitre.org/data/definitions/350.html" target="_blank">CWE-350</a>:Reliance on Reverse DNS Resolution for a Security-Critical Action</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="284:923:419" name="284:923:419" value="284:923:419" onclick="checkTree('284:923:419');"><span class="caret"><span id="div284:923:419" class="cwedata" data-hover="CWE-419:Unprotected Primary Channel -- The software uses a primary channel for administration or restricted functionality, but it does not properly protect the channel."><a href="https://cwe.mitre.org/data/definitions/419.html" target="_blank">CWE-419</a>:Unprotected Primary Channel</span></span>
 <ul class="nested">
 </ul>
@@ -988,12 +1060,12 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:923:925" name="284:923:925" value="284:923:925" onclick="checkTree('284:923:925');"><span class="caret"><span id="div284:923:925" class="cwedata" data-hover="CWE-925:Improper Verification of Intent by Broadcast Receiver -- The Android application uses a Broadcast Receiver that receives an Intent but does not properly verify that the Intent came from an authorized source."><a href="https://cwe.mitre.org/data/definitions/925.html" target="_blank">CWE-925</a>:Improper Verification of Intent by Broadcast Receiver</span></span>
+<li><input type="checkbox" id="284:923:940" name="284:923:940" value="284:923:940" onclick="checkTree('284:923:940');"><span class="caret"><span id="div284:923:940" class="cwedata" data-hover="CWE-940:Improper Verification of Source of a Communication Channel -- The software establishes a communication channel to handle an incoming request that has been initiated by an actor, but it does not properly verify that the request is coming from the expected origin."><a href="https://cwe.mitre.org/data/definitions/940.html" target="_blank">CWE-940</a>:Improper Verification of Source of a Communication Channel</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="284:923:940:925" name="284:923:940:925" value="284:923:940:925" onclick="checkTree('284:923:940:925');"><span class="caret"><span id="div284:923:940:925" class="cwedata" data-hover="CWE-925:Improper Verification of Intent by Broadcast Receiver -- The Android application uses a Broadcast Receiver that receives an Intent but does not properly verify that the Intent came from an authorized source."><a href="https://cwe.mitre.org/data/definitions/925.html" target="_blank">CWE-925</a>:Improper Verification of Intent by Broadcast Receiver</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:923:940" name="284:923:940" value="284:923:940" onclick="checkTree('284:923:940');"><span class="caret"><span id="div284:923:940" class="cwedata" data-hover="CWE-940:Improper Verification of Source of a Communication Channel -- The software establishes a communication channel to handle an incoming request that has been initiated by an actor, but it does not properly verify that the request is coming from the expected origin."><a href="https://cwe.mitre.org/data/definitions/940.html" target="_blank">CWE-940</a>:Improper Verification of Source of a Communication Channel</span></span>
-<ul class="nested">
 </ul>
 </li>
 <li><input type="checkbox" id="284:923:941" name="284:923:941" value="284:923:941" onclick="checkTree('284:923:941');"><span class="caret"><span id="div284:923:941" class="cwedata" data-hover="CWE-941:Incorrectly Specified Destination in a Communication Channel -- The software creates a communication channel to initiate an outgoing request to an actor, but it does not correctly specify the intended destination for that actor."><a href="https://cwe.mitre.org/data/definitions/941.html" target="_blank">CWE-941</a>:Incorrectly Specified Destination in a Communication Channel</span></span>
@@ -1159,12 +1231,12 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:1317" name="284:1317" value="284:1317" onclick="checkTree('284:1317');"><span class="caret"><span id="div284:1317" class="cwedata" data-hover="CWE-1317:Missing Security Checks in Fabric Bridge -- A bridge that is connected to a fabric without security features forwards transactions to the slave without checking the privilege level of the master.  Similarly, it does not check the hardware identity of the transaction received from the slave interface of the bridge."><a href="https://cwe.mitre.org/data/definitions/1317.html" target="_blank">CWE-1317</a>:Missing Security Checks in Fabric Bridge</span></span>
+<li><input type="checkbox" id="284:1317" name="284:1317" value="284:1317" onclick="checkTree('284:1317');"><span class="caret"><span id="div284:1317" class="cwedata" data-hover="CWE-1317:Improper Access Control in Fabric Bridge -- The product uses a fabric bridge for transactions between two Intellectual Property (IP) blocks, but the bridge does not properly perform the expected privilege, identity, or other access control checks between those IP blocks."><a href="https://cwe.mitre.org/data/definitions/1317.html" target="_blank">CWE-1317</a>:Improper Access Control in Fabric Bridge</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:1320" name="284:1320" value="284:1320" onclick="checkTree('284:1320');"><span class="caret"><span id="div284:1320" class="cwedata" data-hover="CWE-1320:Improper Protection for Out of Bounds Signal Level Alerts -- Untrusted agents can disable alerts about signal conditions exceeding limits or the response mechanism that handles such alerts.
-			"><a href="https://cwe.mitre.org/data/definitions/1320.html" target="_blank">CWE-1320</a>:Improper Protection for Out of Bounds Signal Level Alerts</span></span>
+<li><input type="checkbox" id="284:1320" name="284:1320" value="284:1320" onclick="checkTree('284:1320');"><span class="caret"><span id="div284:1320" class="cwedata" data-hover="CWE-1320:Improper Protection for Outbound Error Messages and Alert Signals -- Untrusted agents can disable alerts about signal conditions exceeding limits or the response mechanism that handles such alerts.
+			"><a href="https://cwe.mitre.org/data/definitions/1320.html" target="_blank">CWE-1320</a>:Improper Protection for Outbound Error Messages and Alert Signals</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -1539,18 +1611,14 @@
 <ul class="nested">
 </ul>
 </li>
+<li><input type="checkbox" id="664:400:1246" name="664:400:1246" value="664:400:1246" onclick="checkTree('664:400:1246');"><span class="caret"><span id="div664:400:1246" class="cwedata" data-hover="CWE-1246:Improper Write Handling in Limited-write Non-Volatile Memories -- The product does not implement or incorrectly implements wear leveling operations in limited-write non-volatile memories."><a href="https://cwe.mitre.org/data/definitions/1246.html" target="_blank">CWE-1246</a>:Improper Write Handling in Limited-write Non-Volatile Memories</span></span>
+<ul class="nested">
+</ul>
+</li>
 </ul>
 </li>
 <li><input type="checkbox" id="664:404" name="664:404" value="664:404" onclick="checkTree('664:404');"><span class="caret"><span id="div664:404" class="cwedata" data-hover="CWE-404:Improper Resource Shutdown or Release -- The program does not release or incorrectly releases a resource before it is made available for re-use."><a href="https://cwe.mitre.org/data/definitions/404.html" target="_blank">CWE-404</a>:Improper Resource Shutdown or Release</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:404:262" name="664:404:262" value="664:404:262" onclick="checkTree('664:404:262');"><span class="caret"><span id="div664:404:262" class="cwedata" data-hover="CWE-262:Not Using Password Aging -- If no mechanism is in place for managing password aging, users will have no incentive to update passwords in a timely manner."><a href="https://cwe.mitre.org/data/definitions/262.html" target="_blank">CWE-262</a>:Not Using Password Aging</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="664:404:263" name="664:404:263" value="664:404:263" onclick="checkTree('664:404:263');"><span class="caret"><span id="div664:404:263" class="cwedata" data-hover="CWE-263:Password Aging with Long Expiration -- Allowing password aging to occur unchecked can result in the possibility of diminished password integrity."><a href="https://cwe.mitre.org/data/definitions/263.html" target="_blank">CWE-263</a>:Password Aging with Long Expiration</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="664:404:299" name="664:404:299" value="664:404:299" onclick="checkTree('664:404:299');"><span class="caret"><span id="div664:404:299" class="cwedata" data-hover="CWE-299:Improper Check for Certificate Revocation -- The software does not check or incorrectly checks the revocation status of a certificate, which may cause it to use a certificate that has been compromised."><a href="https://cwe.mitre.org/data/definitions/299.html" target="_blank">CWE-299</a>:Improper Check for Certificate Revocation</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:404:299:370" name="664:404:299:370" value="664:404:299:370" onclick="checkTree('664:404:299:370');"><span class="caret"><span id="div664:404:299:370" class="cwedata" data-hover="CWE-370:Missing Check for Certificate Revocation after Initial Check -- The software does not check the revocation status of a certificate after its initial revocation check, which can cause the software to perform privileged actions even after the certificate is revoked at a later time."><a href="https://cwe.mitre.org/data/definitions/370.html" target="_blank">CWE-370</a>:Missing Check for Certificate Revocation after Initial Check</span></span>
@@ -2410,6 +2478,10 @@
 <ul class="nested">
 </ul>
 </li>
+<li><input type="checkbox" id="664:668:491" name="664:668:491" value="664:668:491" onclick="checkTree('664:668:491');"><span class="caret"><span id="div664:668:491" class="cwedata" data-hover="CWE-491:Public cloneable() Method Without Final ('Object Hijack') -- A class has a cloneable() method that is not declared final, which allows an object to be created without calling the constructor. This can cause the object to be in an unexpected state."><a href="https://cwe.mitre.org/data/definitions/491.html" target="_blank">CWE-491</a>:Public cloneable() Method Without Final ('Object Hijack')</span></span>
+<ul class="nested">
+</ul>
+</li>
 <li><input type="checkbox" id="664:668:492" name="664:668:492" value="664:668:492" onclick="checkTree('664:668:492');"><span class="caret"><span id="div664:668:492" class="cwedata" data-hover="CWE-492:Use of Inner Class Containing Sensitive Data -- Inner classes are translated into classes that are accessible at package scope and may expose code that the programmer intended to keep private to attackers."><a href="https://cwe.mitre.org/data/definitions/492.html" target="_blank">CWE-492</a>:Use of Inner Class Containing Sensitive Data</span></span>
 <ul class="nested">
 </ul>
@@ -2674,22 +2746,6 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="664:669:602" name="664:669:602" value="664:669:602" onclick="checkTree('664:669:602');"><span class="caret"><span id="div664:669:602" class="cwedata" data-hover="CWE-602:Client-Side Enforcement of Server-Side Security -- The software is composed of a server that relies on the client to implement a mechanism that is intended to protect the server."><a href="https://cwe.mitre.org/data/definitions/602.html" target="_blank">CWE-602</a>:Client-Side Enforcement of Server-Side Security</span></span>
-<ul class="nested">
-<li><input type="checkbox" id="664:669:602:565" name="664:669:602:565" value="664:669:602:565" onclick="checkTree('664:669:602:565');"><span class="caret"><span id="div664:669:602:565" class="cwedata" data-hover="CWE-565:Reliance on Cookies without Validation and Integrity Checking -- The application relies on the existence or values of cookies when performing security-critical operations, but it does not properly ensure that the setting is valid for the associated user."><a href="https://cwe.mitre.org/data/definitions/565.html" target="_blank">CWE-565</a>:Reliance on Cookies without Validation and Integrity Checking</span></span>
-<ul class="nested">
-<li><input type="checkbox" id="664:669:602:565:784" name="664:669:602:565:784" value="664:669:602:565:784" onclick="checkTree('664:669:602:565:784');"><span class="caret"><span id="div664:669:602:565:784" class="cwedata" data-hover="CWE-784:Reliance on Cookies without Validation and Integrity Checking in a Security Decision -- The application uses a protection mechanism that relies on the existence or values of a cookie, but it does not properly ensure that the cookie is valid for the associated user."><a href="https://cwe.mitre.org/data/definitions/784.html" target="_blank">CWE-784</a>:Reliance on Cookies without Validation and Integrity Checking in a Security Decision</span></span>
-<ul class="nested">
-</ul>
-</li>
-</ul>
-</li>
-<li><input type="checkbox" id="664:669:602:603" name="664:669:602:603" value="664:669:602:603" onclick="checkTree('664:669:602:603');"><span class="caret"><span id="div664:669:602:603" class="cwedata" data-hover="CWE-603:Use of Client-Side Authentication -- A client/server product performs authentication within client code but not in server code, allowing server-side authentication to be bypassed via a modified client that omits the authentication check."><a href="https://cwe.mitre.org/data/definitions/603.html" target="_blank">CWE-603</a>:Use of Client-Side Authentication</span></span>
-<ul class="nested">
-</ul>
-</li>
-</ul>
-</li>
 <li><input type="checkbox" id="664:669:829" name="664:669:829" value="664:669:829" onclick="checkTree('664:669:829');"><span class="caret"><span id="div664:669:829" class="cwedata" data-hover="CWE-829:Inclusion of Functionality from Untrusted Control Sphere -- The software imports, requires, or includes executable functionality (such as a library) from a source that is outside of the intended control sphere."><a href="https://cwe.mitre.org/data/definitions/829.html" target="_blank">CWE-829</a>:Inclusion of Functionality from Untrusted Control Sphere</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:669:829:98" name="664:669:829:98" value="664:669:829:98" onclick="checkTree('664:669:829:98');"><span class="caret"><span id="div664:669:829:98" class="cwedata" data-hover="CWE-98:Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') -- The PHP application receives input from an upstream component, but it does not restrict or incorrectly restricts the input before its usage in "require," "include," or similar functions."><a href="https://cwe.mitre.org/data/definitions/98.html" target="_blank">CWE-98</a>:Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')</span></span>
@@ -2747,6 +2803,10 @@
 </ul>
 </li>
 <li><input type="checkbox" id="664:704:843" name="664:704:843" value="664:704:843" onclick="checkTree('664:704:843');"><span class="caret"><span id="div664:704:843" class="cwedata" data-hover="CWE-843:Access of Resource Using Incompatible Type ('Type Confusion') -- The program allocates or initializes a resource such as a pointer, object, or variable using one type, but it later accesses that resource using a type that is incompatible with the original type."><a href="https://cwe.mitre.org/data/definitions/843.html" target="_blank">CWE-843</a>:Access of Resource Using Incompatible Type ('Type Confusion')</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:704:1389" name="664:704:1389" value="664:704:1389" onclick="checkTree('664:704:1389');"><span class="caret"><span id="div664:704:1389" class="cwedata" data-hover="CWE-1389:Incorrect Parsing of Numbers with Different Radices -- The product parses numeric input assuming base 10 (decimal) values, but it does not account for inputs that use a different base number (radix)."><a href="https://cwe.mitre.org/data/definitions/1389.html" target="_blank">CWE-1389</a>:Incorrect Parsing of Numbers with Different Radices</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3034,7 +3094,7 @@
 </li>
 <li><input type="checkbox" id="664:922" name="664:922" value="664:922" onclick="checkTree('664:922');"><span class="caret"><span id="div664:922" class="cwedata" data-hover="CWE-922:Insecure Storage of Sensitive Information -- The software stores sensitive information without properly limiting read or write access by unauthorized actors."><a href="https://cwe.mitre.org/data/definitions/922.html" target="_blank">CWE-922</a>:Insecure Storage of Sensitive Information</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:922:312" name="664:922:312" value="664:922:312" onclick="checkTree('664:922:312');"><span class="caret"><span id="div664:922:312" class="cwedata" data-hover="CWE-312:Cleartext Storage of Sensitive Information -- The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere."><a href="https://cwe.mitre.org/data/definitions/312.html" target="_blank">CWE-312</a>:Cleartext Storage of Sensitive Information</span></span>
+<li><input type="checkbox" id="664:922:312" name="664:922:312" value="664:922:312" onclick="checkTree('664:922:312');"><span class="caret"><span id="div664:922:312" class="cwedata" data-hover="CWE-312:Cleartext Storage of Sensitive Information -- The product stores sensitive information in cleartext within a resource that might be accessible to another control sphere."><a href="https://cwe.mitre.org/data/definitions/312.html" target="_blank">CWE-312</a>:Cleartext Storage of Sensitive Information</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:922:312:313" name="664:922:312:313" value="664:922:312:313" onclick="checkTree('664:922:312:313');"><span class="caret"><span id="div664:922:312:313" class="cwedata" data-hover="CWE-313:Cleartext Storage in a File or on Disk -- The application stores sensitive information in cleartext in a file, or on disk."><a href="https://cwe.mitre.org/data/definitions/313.html" target="_blank">CWE-313</a>:Cleartext Storage in a File or on Disk</span></span>
 <ul class="nested">
@@ -3082,10 +3142,6 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li><input type="checkbox" id="664:1246" name="664:1246" value="664:1246" onclick="checkTree('664:1246');"><span class="caret"><span id="div664:1246" class="cwedata" data-hover="CWE-1246:Improper Write Handling in Limited-write Non-Volatile Memories -- The product does not implement or incorrectly implements wear leveling operations in limited-write non-volatile memories."><a href="https://cwe.mitre.org/data/definitions/1246.html" target="_blank">CWE-1246</a>:Improper Write Handling in Limited-write Non-Volatile Memories</span></span>
-<ul class="nested">
 </ul>
 </li>
 <li><input type="checkbox" id="664:1250" name="664:1250" value="664:1250" onclick="checkTree('664:1250');"><span class="caret"><span id="div664:1250" class="cwedata" data-hover="CWE-1250:Improper Preservation of Consistency Between Independent Representations of Shared State -- The product has or supports multiple distributed components or sub-systems that are each required to keep their own local copy of shared data - such as state or cache - but the product does not ensure that all local copies remain consistent with each other."><a href="https://cwe.mitre.org/data/definitions/1250.html" target="_blank">CWE-1250</a>:Improper Preservation of Consistency Between Independent Representations of Shared State</span></span>
@@ -3483,7 +3539,7 @@
 </li>
 <li><input type="checkbox" id="691:799" name="691:799" value="691:799" onclick="checkTree('691:799');"><span class="caret"><span id="div691:799" class="cwedata" data-hover="CWE-799:Improper Control of Interaction Frequency -- The software does not properly limit the number or frequency of interactions that it has with an actor, such as the number of incoming requests."><a href="https://cwe.mitre.org/data/definitions/799.html" target="_blank">CWE-799</a>:Improper Control of Interaction Frequency</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="691:799:307" name="691:799:307" value="691:799:307" onclick="checkTree('691:799:307');"><span class="caret"><span id="div691:799:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The software does not implement sufficient measures to prevent multiple failed authentication attempts within in a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts</span></span>
+<li><input type="checkbox" id="691:799:307" name="691:799:307" value="691:799:307" onclick="checkTree('691:799:307');"><span class="caret"><span id="div691:799:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3532,7 +3588,7 @@
 </li>
 <li><input type="checkbox" id="693:311" name="693:311" value="693:311" onclick="checkTree('693:311');"><span class="caret"><span id="div693:311" class="cwedata" data-hover="CWE-311:Missing Encryption of Sensitive Data -- The software does not encrypt sensitive or critical information before storage or transmission."><a href="https://cwe.mitre.org/data/definitions/311.html" target="_blank">CWE-311</a>:Missing Encryption of Sensitive Data</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="693:311:312" name="693:311:312" value="693:311:312" onclick="checkTree('693:311:312');"><span class="caret"><span id="div693:311:312" class="cwedata" data-hover="CWE-312:Cleartext Storage of Sensitive Information -- The application stores sensitive information in cleartext within a resource that might be accessible to another control sphere."><a href="https://cwe.mitre.org/data/definitions/312.html" target="_blank">CWE-312</a>:Cleartext Storage of Sensitive Information</span></span>
+<li><input type="checkbox" id="693:311:312" name="693:311:312" value="693:311:312" onclick="checkTree('693:311:312');"><span class="caret"><span id="div693:311:312" class="cwedata" data-hover="CWE-312:Cleartext Storage of Sensitive Information -- The product stores sensitive information in cleartext within a resource that might be accessible to another control sphere."><a href="https://cwe.mitre.org/data/definitions/312.html" target="_blank">CWE-312</a>:Cleartext Storage of Sensitive Information</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="693:311:312:313" name="693:311:312:313" value="693:311:312:313" onclick="checkTree('693:311:312:313');"><span class="caret"><span id="div693:311:312:313" class="cwedata" data-hover="CWE-313:Cleartext Storage in a File or on Disk -- The application stores sensitive information in cleartext in a file, or on disk."><a href="https://cwe.mitre.org/data/definitions/313.html" target="_blank">CWE-313</a>:Cleartext Storage in a File or on Disk</span></span>
 <ul class="nested">
@@ -3696,10 +3752,6 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="693:330:804" name="693:330:804" value="693:330:804" onclick="checkTree('693:330:804');"><span class="caret"><span id="div693:330:804" class="cwedata" data-hover="CWE-804:Guessable CAPTCHA -- The software uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor."><a href="https://cwe.mitre.org/data/definitions/804.html" target="_blank">CWE-804</a>:Guessable CAPTCHA</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="693:330:1204" name="693:330:1204" value="693:330:1204" onclick="checkTree('693:330:1204');"><span class="caret"><span id="div693:330:1204" class="cwedata" data-hover="CWE-1204:Generation of Weak Initialization Vector (IV) -- The product uses a cryptographic primitive that uses an Initialization
 			Vector (IV), but the product does not generate IVs that are
 			sufficiently unpredictable or unique according to the expected
@@ -3810,7 +3862,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="693:602" name="693:602" value="693:602" onclick="checkTree('693:602');"><span class="caret"><span id="div693:602" class="cwedata" data-hover="CWE-602:Client-Side Enforcement of Server-Side Security -- The software is composed of a server that relies on the client to implement a mechanism that is intended to protect the server."><a href="https://cwe.mitre.org/data/definitions/602.html" target="_blank">CWE-602</a>:Client-Side Enforcement of Server-Side Security</span></span>
+<li><input type="checkbox" id="693:602" name="693:602" value="693:602" onclick="checkTree('693:602');"><span class="caret"><span id="div693:602" class="cwedata" data-hover="CWE-602:Client-Side Enforcement of Server-Side Security -- The product is composed of a server that relies on the client to implement a mechanism that is intended to protect the server."><a href="https://cwe.mitre.org/data/definitions/602.html" target="_blank">CWE-602</a>:Client-Side Enforcement of Server-Side Security</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="693:602:565" name="693:602:565" value="693:602:565" onclick="checkTree('693:602:565');"><span class="caret"><span id="div693:602:565" class="cwedata" data-hover="CWE-565:Reliance on Cookies without Validation and Integrity Checking -- The application relies on the existence or values of cookies when performing security-critical operations, but it does not properly ensure that the setting is valid for the associated user."><a href="https://cwe.mitre.org/data/definitions/565.html" target="_blank">CWE-565</a>:Reliance on Cookies without Validation and Integrity Checking</span></span>
 <ul class="nested">
@@ -3818,10 +3870,6 @@
 <ul class="nested">
 </ul>
 </li>
-</ul>
-</li>
-<li><input type="checkbox" id="693:602:603" name="693:602:603" value="693:602:603" onclick="checkTree('693:602:603');"><span class="caret"><span id="div693:602:603" class="cwedata" data-hover="CWE-603:Use of Client-Side Authentication -- A client/server product performs authentication within client code but not in server code, allowing server-side authentication to be bypassed via a modified client that omits the authentication check."><a href="https://cwe.mitre.org/data/definitions/603.html" target="_blank">CWE-603</a>:Use of Client-Side Authentication</span></span>
-<ul class="nested">
 </ul>
 </li>
 </ul>
@@ -3890,7 +3938,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="693:1248" name="693:1248" value="693:1248" onclick="checkTree('693:1248');"><span class="caret"><span id="div693:1248" class="cwedata" data-hover="CWE-1248:Semiconductor Defects in Hardware Logic with Security-Sensitive Implications -- The security-sensitive hardware module contains semiconductor defects. "><a href="https://cwe.mitre.org/data/definitions/1248.html" target="_blank">CWE-1248</a>:Semiconductor Defects in Hardware Logic with Security-Sensitive Implications</span></span>
+<li><input type="checkbox" id="693:1248" name="693:1248" value="693:1248" onclick="checkTree('693:1248');"><span class="caret"><span id="div693:1248" class="cwedata" data-hover="CWE-1248:Semiconductor Defects in Hardware Logic with Security-Sensitive Implications -- The security-sensitive hardware module contains semiconductor defects."><a href="https://cwe.mitre.org/data/definitions/1248.html" target="_blank">CWE-1248</a>:Semiconductor Defects in Hardware Logic with Security-Sensitive Implications</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3952,10 +4000,6 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="697:185:1333" name="697:185:1333" value="697:185:1333" onclick="checkTree('697:185:1333');"><span class="caret"><span id="div697:185:1333" class="cwedata" data-hover="CWE-1333:Inefficient Regular Expression Complexity -- The product uses a regular expression with an inefficient, possibly exponential worst-case computational complexity that consumes excessive CPU cycles."><a href="https://cwe.mitre.org/data/definitions/1333.html" target="_blank">CWE-1333</a>:Inefficient Regular Expression Complexity</span></span>
-<ul class="nested">
-</ul>
-</li>
 </ul>
 </li>
 <li><input type="checkbox" id="697:581" name="697:581" value="697:581" onclick="checkTree('697:581');"><span class="caret"><span id="div697:581" class="cwedata" data-hover="CWE-581:Object Model Violation: Just One of Equals and Hashcode Defined -- The software does not maintain equal hashcodes for equal objects."><a href="https://cwe.mitre.org/data/definitions/581.html" target="_blank">CWE-581</a>:Object Model Violation: Just One of Equals and Hashcode Defined</span></span>
@@ -3972,7 +4016,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="697:1023:478" name="697:1023:478" value="697:1023:478" onclick="checkTree('697:1023:478');"><span class="caret"><span id="div697:1023:478" class="cwedata" data-hover="CWE-478:Missing Default Case in Switch Statement -- The code does not have a default case in a switch statement, which might lead to complex logical errors and resultant weaknesses."><a href="https://cwe.mitre.org/data/definitions/478.html" target="_blank">CWE-478</a>:Missing Default Case in Switch Statement</span></span>
+<li><input type="checkbox" id="697:1023:478" name="697:1023:478" value="697:1023:478" onclick="checkTree('697:1023:478');"><span class="caret"><span id="div697:1023:478" class="cwedata" data-hover="CWE-478:Missing Default Case in Multiple Condition Expression -- The code does not have a default case in an expression with multiple conditions, such as a switch statement."><a href="https://cwe.mitre.org/data/definitions/478.html" target="_blank">CWE-478</a>:Missing Default Case in Multiple Condition Expression</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -4527,7 +4571,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="707:20:170:682:1339" name="707:20:170:682:1339" value="707:20:170:682:1339" onclick="checkTree('707:20:170:682:1339');"><span class="caret"><span id="div707:20:170:682:1339" class="cwedata" data-hover="CWE-1339:Insufficient Precision or Accuracy of a Real Number -- The program processes a real number with an implementation in which the number’s representation does not preserve required accuracy and precision in its fractional part, causing an incorrect result."><a href="https://cwe.mitre.org/data/definitions/1339.html" target="_blank">CWE-1339</a>:Insufficient Precision or Accuracy of a Real Number</span></span>
+<li><input type="checkbox" id="707:20:170:682:1339" name="707:20:170:682:1339" value="707:20:170:682:1339" onclick="checkTree('707:20:170:682:1339');"><span class="caret"><span id="div707:20:170:682:1339" class="cwedata" data-hover="CWE-1339:Insufficient Precision or Accuracy of a Real Number -- The program processes a real number with an implementation in which the number's representation does not preserve required accuracy and precision in its fractional part, causing an incorrect result."><a href="https://cwe.mitre.org/data/definitions/1339.html" target="_blank">CWE-1339</a>:Insufficient Precision or Accuracy of a Real Number</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -5113,7 +5157,7 @@ intended arguments, options, or switches within that command string."><a href="h
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="707:170:682:1339" name="707:170:682:1339" value="707:170:682:1339" onclick="checkTree('707:170:682:1339');"><span class="caret"><span id="div707:170:682:1339" class="cwedata" data-hover="CWE-1339:Insufficient Precision or Accuracy of a Real Number -- The program processes a real number with an implementation in which the number’s representation does not preserve required accuracy and precision in its fractional part, causing an incorrect result."><a href="https://cwe.mitre.org/data/definitions/1339.html" target="_blank">CWE-1339</a>:Insufficient Precision or Accuracy of a Real Number</span></span>
+<li><input type="checkbox" id="707:170:682:1339" name="707:170:682:1339" value="707:170:682:1339" onclick="checkTree('707:170:682:1339');"><span class="caret"><span id="div707:170:682:1339" class="cwedata" data-hover="CWE-1339:Insufficient Precision or Accuracy of a Real Number -- The program processes a real number with an implementation in which the number's representation does not preserve required accuracy and precision in its fractional part, causing an incorrect result."><a href="https://cwe.mitre.org/data/definitions/1339.html" target="_blank">CWE-1339</a>:Insufficient Precision or Accuracy of a Real Number</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -6129,9 +6173,9 @@ intended arguments, options, or switches within that command string."><a href="h
                 });
             }
         </script>
-        <input type="hidden" id="cweIDCountHidden" value="927">
+        <input type="hidden" id="cweIDCountHidden" value="933">
         <input type="hidden" id="cweIDCountStatusDraftHidden" value="432">
-        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="469">
+        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="475">
         <input type="hidden" id="cweIDCountStatusStableHidden" value="26">
         <input type="hidden" id="cweIDCountStatusDeprecatedHidden" value="24">
         <input type="hidden" id="cweIDCountStatusOtherHidden" value="0">
