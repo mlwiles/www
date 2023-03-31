@@ -4,21 +4,17 @@ td {
     font-family: Tahoma, Verdana, sans-serif;
 }
 
-#cvssReference {
-    font-size: 100%;
-}
-
 fieldset {
     position: relative;
-    background-color: #f2f2f2;
+    background-color: #lightblue;
     margin-top: 50px;
-    border: 0;
+    border: 1;
     padding: 1em 0;
 }
 
 fieldset legend {
-    background-color: #666666;
-    color: #ffffff;
+    background-color: lightblue;
+    color: #lightblue;
     margin: 0;
     width: 100%;
     padding: 0.5em 0px;
@@ -59,13 +55,12 @@ fieldset input {
 }
 
 fieldset label {
-    background: #cccccc;
+    background: #lightblue;
     display: inline-block;
     margin: 3px;
     padding: 2px 5px;
     border: 0;
     cursor: pointer;
-    font-size: 90%;
     border-radius: 5px;
     color: #666666;
     border: 1px solid #999999;
@@ -88,23 +83,6 @@ fieldset input:checked+label {
     color: #ffffff;
 }
 
-#vector {
-    margin: 0 1em;
-    padding: 0;
-}
-
-#vectorString {
-    display: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    background-color: #090;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 80em;
-    max-width: 100%;
-}
 
 .scoreRating {
     position: absolute;
@@ -157,7 +135,6 @@ fieldset input:checked+label {
 
 .scoreRating span {
     font-size: 150%;
-    font-weight: bold;
     width: 100%;
 }
 
@@ -181,11 +158,4 @@ fieldset input:checked+label {
     font-weight: normal;
     margin-bottom: 5px;
     display: block;
-}
-
-div#scriptWarning {
-    border: solid red 2px;
-    background: #f5dddd;
-    padding: 1em 1em 1em 1em;
-    margin: 0.4em 0;
 }
