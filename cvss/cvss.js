@@ -165,7 +165,15 @@ CVSS31.calculateCVSSFromVector = function (vectorString) {
             success: !1, errorType: "MultipleDefinitionsOfMetric", errorMetrics: badMetrics
         }
     }
-    return CVSS31.calculateCVSSFromMetrics(metricValues.AV, metricValues.AC, metricValues.PR, metricValues.UI, metricValues.S, metricValues.C, metricValues.I, metricValues.A)
+    return CVSS31.calculateCVSSFromMetrics(
+        metricValues.AV,
+        metricValues.AC,
+        metricValues.PR,
+        metricValues.UI,
+        metricValues.S,
+        metricValues.C,
+        metricValues.I,
+        metricValues.A)
 };
 
 CVSS31.roundUp1 = function Roundup(input) {
@@ -207,12 +215,10 @@ function updateScores() {
             hide(L[i])
         }
         parentNode(text("#baseMetricScore", result.baseMetricScore),
-            '.scoreRating').className = 'scoreRating ' +
-            result.baseSeverity.toLowerCase();
-        text("#baseSeverity", "(" + result.baseSeverity + ")");
-        window.location.hash = result.vectorString
+            '.scoreRating').className = 'scoreRating ' + result.baseSeverity.toLowerCase();
         document.getElementById("cvssvector").value = result.vectorString;
         document.getElementById("generate").disabled = false;
+        window.location.hash=result.vectorString
         //validateCVSS31();
     } else if (result.error === "Not all base metrics were given - cannot calculate scores.") {
         var L = document.querySelectorAll(".needBaseMetrics"), i = L.length;
@@ -255,10 +261,6 @@ function parentNode(p, q) {
     else if ((typeof (q) == 'string' && p.matchesSelector(q)) || p == q) return p;
     else if (p.nodeName.toLowerCase() != 'html') return parentNode(p.parentNode, q);
     else return
-}
-function bind(q, tg, fn) {
-    var o = node(q); if (!o) return; if (o.addEventListener) { o.addEventListener(tg, fn, !1) } else if (o.attachEvent) { o.attachEvent('on' + tg, fn) } else { o['on' + tg] = fn }
-    return o
 }
 
 function text(q, s) {
@@ -328,6 +330,22 @@ function setMetricsFromVector(vectorString) {
     }
     updateScores();
     return result
+}
+
+var CVSSVectorInURL; 
+function urlhash() { 
+    var h = window.location.hash; 
+    CVSSVectorInURL = h; 
+    setMetricsFromVector(h.substring(1)) 
+}
+function inputSelect() { 
+    this.setSelectionRange(0, this.value.length) 
+}
+function cvssLoad() {
+    urlhash(); 
+    if (("onhashchange" in window)) { 
+        window.onhashchange = urlhash 
+    }
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -555,7 +573,6 @@ function validateCVSS31() {
 
     document.getElementById("cvssreasons").value = textarea;
 
-    //#CVSS31.calculateCVSSFromVector(vector)
     if (badvector) {
         console.log("Vector is not valid:\n" + message);
         alert("Vector is not valid:\n" + message);
