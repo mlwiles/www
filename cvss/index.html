@@ -1,271 +1,137 @@
-<!-- https://www.w3schools.com/howto/howto_js_treeview.asp -->
+<!-- sourced fronm https://www.first.org/cvss/calculator/3.1 -->
 <html>
+
     <head>
-        <!-- <link rel="stylesheet" type="text/css" href="cwe.css" /> -->
-        <style>
-            span, input, td {
-                font-family: Tahoma, Verdana, sans-serif;
-            }   
-
-        </style>
-        <script type="text/javascript" src="cvsscalc31.js" ></script>
-        <script type = "text/javascript">
-
-            var cvss_table = {
-                'AV': { 'N':   { 'value' : 'Network'  , 'desc' : 'The vulnerable component is bound to the network stack and the set of possible attackers extends beyond the other options listed below, up to and including the entire Internet.' },
-                        'A':   { 'value' : 'Adjacent' , 'desc' : 'The vulnerable component is bound to the network stack, but the attack is limited at the protocol level to a logically adjacent topology.' },
-                        'L':   { 'value' : 'Local'    , 'desc' : 'The vulnerable component is not bound to the network stack and the attacker\'s path is via read/write/execute capabilities.' },
-                        'P':   { 'value' : 'Physical' , 'desc' : 'The attack requires the attacker to physically touch or manipulate the vulnerable component.' } },
-                'AC': { 'L':   { 'value' : 'Low'      , 'desc' : 'Specialized access conditions or extenuating circumstances do not exist.' },
-                        'H':   { 'value' : 'High'     , 'desc' : 'A successful attack depends on conditions beyond the attacker\'s control.' } },
-                'PR': { 'N':   { 'value' : 'None'     , 'desc' : 'The attacker is unauthorized prior to attack, and therefore does not require any access to settings or files of the vulnerable system to carry out an attack.' },
-                        'L':   { 'value' : 'Low'      , 'desc' : 'The attacker requires privileges that provide basic user capabilities that could normally affect only settings and files owned by a user.' },
-                        'H':   { 'value' : 'High'     , 'desc' : 'The attacker requires privileges that provide significant (e.g., administrative) control over the vulnerable component allowing access to component-wide settings and files.' } },
-                'UI': { 'N':   { 'value' : 'None'     , 'desc' : 'The vulnerable system can be exploited without interaction from any user.' },
-                        'R':   { 'value' : 'Required' , 'desc' : 'Successful exploitation of this vulnerability requires a user to take some action before the vulnerability can be exploited.' } },
-                'S':  { 'U':   { 'value' : 'Unchanged', 'desc' : 'An exploited vulnerability can only affect resources managed by the same security authority. In this case, the vulnerable component and the impacted component are either the same, or both are managed by the same security authority.' },
-                        'C':   { 'value' : 'Changed'  , 'desc' : 'An exploited vulnerability can affect resources beyond the security scope managed by the security authority of the vulnerable component.' } },
-                'C':  { 'H':   { 'value' : 'High'     , 'desc' : 'There is a total loss of confidentiality, resulting in all resources within the impacted component being divulged to the attacker.' },
-                        'L':   { 'value' : 'Low'      , 'desc' : 'There is some loss of confidentiality.' },
-                        'N':   { 'value' : 'None'     , 'desc' : 'There is no loss of confidentiality within the impacted component.' } },
-                'I':  { 'H':   { 'value' : 'High'     , 'desc' : 'There is a total loss of integrity, or a complete loss of protection.' },
-                        'L':   { 'value' : 'Low'      , 'desc' : 'Modification of data is possible, but the attacker does not have control over the consequence of a modification, or the amount of modification is limited.' },
-                        'N':   { 'value' : 'None'     , 'desc' : 'There is no loss of integrity within the impacted component.' } },
-                'A':  { 'H':   { 'value' : 'High'     , 'desc' : 'There is a total loss of availability, resulting in the attacker being able to fully deny access to resources in the impacted component; this loss is either sustained (while the attacker continues to deliver the attack) or persistent (the condition persists even after the attack has completed).' },
-                        'L':   { 'value' : 'Low'      , 'desc' : 'Performance is reduced or there are interruptions in resource availability.' }, 
-                        'N':   { 'value' : 'None'     , 'desc' : 'There is no impact to availability within the impacted component.' } }
-            };
-
-            function checkVectorValue(vectorin, vectorname, vectorabbr, vectorvalues) {
-                console.log("checkVectorValue:vectorin:" + vectorin);
-                console.log("checkVectorValue:vectorname:" + vectorname);
-                console.log("checkVectorValue:vectorabbr:" + vectorabbr);
-                console.log("checkVectorValue:vectorvalues:" + vectorvalues);
-                returnvalue = vectorin;
-                returnmessage = ""
-                splitvectorin = vectorin.split(":");
-                if (splitvectorin[0] == undefined) {
-                    badvector = true;
-                    returnmessage += "Unsupported " + vectorname + " " + returnvalue + "\n";
-                }
-                if (splitvectorin[1] == undefined) {
-                    badvector = true;
-                    returnmessage += "Unsupported " + vectorname + " " + returnvalue + "\n";
-                }
-                if (splitvectorin[0] != vectorabbr) {
-                    badvector = true;
-                    returnmessage += vectorname + " (" + vectorabbr +") entered: " + returnvalue + "\n";    
-                }
-                splitvectorvalues = vectorvalues.split("/")
-                vectorvaluefound = false;
-                vectorvalues = ""
-                for (let i = 0; i < splitvectorvalues.length; i++) {
-                    console.log("checkVectorValue:splitvectorvalues[" + i + "]:" + splitvectorvalues[i]);
-
-                    if (splitvectorvalues[i] == splitvectorin[1]) {
-                        vectorvaluefound = true;
-                    }
-                    if (vectorvalues.length) {
-                        vectorvalues += " or "
-                    }
-                    vectorvalues += splitvectorvalues[i];
-                    console.log("checkVectorValue:vectorvalues:" + vectorvalues);
-                }
-                if (vectorvaluefound)  {
-                    return splitvectorin[1]
-                } else {
-                    badvector = true;
-                    returnmessage += vectorname + " (" + vectorabbr + ") value " + vectorvalues + " expected: " + returnvalue + "\n";    
-                }
-                return returnmessage;
-            }
-            function validateCVSS() {
-                vector = document.getElementById("cvssvector").value
-                if (vector == null || vector == "" ) {
-                    alert("Vector is empty.");
-                    return
-                }
-                //CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
-                badvector = false;
-                message = "";
-
-                const vectorArray = vector.split("/");
-                if (vectorArray[0] == undefined) {
-                    badvector = true
-                    message = "Unsupported format: " + vector + "\n";
-                } else {
-                    version = vectorArray[0];
-                    if (version != "CVSS:3.1") {
-                        badvector = true
-                        message += "Unsupported CVSS Version: " + version + "\n";
-                    }
-                }
-                if (vectorArray[1] == undefined) {
-                    badvector = true
-                } else {
-                    attackvector = vectorArray[1];
-                    attackvector = checkVectorValue(attackvector, "Attack Vector", "AV", "N/A/L/P")
-                    if (attackvector.length > 1) {
-                        badvector = true;
-                        message += attackvector;
-                    }
-                }
-                if (vectorArray[2] == undefined) {
-                    badvector = true
-                } else {
-                    attackcomplexity = vectorArray[2];
-                    attackcomplexity = checkVectorValue(attackcomplexity, "Attack Complexity", "AC", "L/H")
-                    if (attackcomplexity.length > 1) {
-                        badvector = true;
-                        message += attackcomplexity;
-                    }
-                }
-                if (vectorArray[3] == undefined) {
-                    badvector = true
-                } else {
-                    privilegesrequired = vectorArray[3];
-                    privilegesrequired = checkVectorValue(privilegesrequired, "Privileges Required", "PR", "N/L/H")
-                    if (privilegesrequired.length > 1) {
-                        badvector = true;
-                        message += privilegesrequired;
-                    }
-                }
-                if (vectorArray[4] == undefined) {
-                    badvector = true
-                } else {
-                    userinteraction = vectorArray[4];
-                    userinteraction = checkVectorValue(userinteraction, "User Interaction", "UI", "N/R")
-                    if (userinteraction.length > 1) {
-                        badvector = true;
-                        message += userinteraction;
-                    }
-                }
-                if (vectorArray[5] == undefined) {
-                    badvector = true
-                } else {
-                    scope = vectorArray[5];
-                    scope = checkVectorValue(scope, "Scope", "S", "U/C")
-                    if (scope.length > 1) {
-                        badvector = true;
-                        message += scope;
-                    }
-                }
-                if (vectorArray[6] == undefined) {
-                    badvector = true
-                } else {
-                    confidentiality = vectorArray[6];
-                    confidentiality = checkVectorValue(confidentiality, "confidentiality", "C", "N/L/H")
-                    if (confidentiality.length > 1) {
-                        badvector = true;
-                        message += confidentiality;
-                    }
-                }
-                if (vectorArray[7] == undefined) {
-                    badvector = true
-                } else {
-                    integrity = vectorArray[7];
-                    integrity = checkVectorValue(integrity, "Intigrety", "I", "N/L/H")
-                    if (integrity.length > 1) {
-                        badvector = true;
-                        message += integrity;
-                    }
-                }
-                if (vectorArray[8] == undefined) {
-                    badvector = true
-                } else {
-                    availability = vectorArray[8];
-                    availability = checkVectorValue(availability, "Availability", "A", "N/L/H")
-                    if (availability .length > 1) {
-                        badvector = true;
-                        message += availability;
-                    }
-                }
-
-                parsed = "version:" + version + "\n" +
-                "attackvector:" + attackvector + "\n" +
-                "attackcomplexity:" + attackcomplexity + "\n" +
-                "privilegesrequired:" + privilegesrequired + "\n" +
-                "userinteraction:" + userinteraction + "\n" +
-                "scope:" + scope + "\n" +
-                "confidentiality:" + confidentiality + "\n" +
-                "integrity:" + integrity + "\n" +
-                "availability:" + availability; 
-                console.log("validateCVSS:parsed:" + parsed);
- 
-                /*
-                for (key in cvss_table) { 
-                    console.log(cvss_table[" + key + "]");
-                    for (subkey in cvss_table[key]) { 
-                        console.log("cvss_table[" + key + "][" + subkey + "]:" + cvss_table[key][subkey]);
-                        for (subsubkey in cvss_table[key][subkey]) { 
-                            console.log("cvss_table[" + key + "][" + subkey + "][" + subsubkey + "]:" + cvss_table[key][subkey][subsubkey]);
-                        }
-                    }
-                }
-                console.log("cvss_table['AV']['" + attackvector + "']['value'] = " + cvss_table['AV'][attackvector]['value']);
-                console.log("cvss_table['AV']['" + attackvector + "']['desc'] = " + cvss_table['AV'][attackvector]['desc']);
-                */
-
-                var textarea = "Attack Vector : " + cvss_table['AV'][attackvector]['value'] + " : " +  cvss_table['AV'][attackvector]['desc'] + "\n" +
-                    "Attack Complexity : " + cvss_table['AC'][attackcomplexity]['value'] + " : " +  cvss_table['AC'][attackcomplexity]['desc'] + "\n" +
-                    "Privileges Required : " + cvss_table['PR'][privilegesrequired]['value'] + " : " +  cvss_table['PR'][privilegesrequired]['desc'] + "\n" +
-                    "User Interaction : " + cvss_table['UI'][userinteraction]['value'] + " : " +  cvss_table['UI'][userinteraction]['desc'] + "\n" +
-                    "Scope : " + cvss_table['S'][scope]['value'] + " : " +  cvss_table['S'][scope]['desc'] + "\n" +
-                    "Confidentiality : " + cvss_table['C'][confidentiality]['value'] + " : " +  cvss_table['C'][confidentiality]['desc'] + "\n" +
-                    "Integrity : " + cvss_table['I'][integrity]['value'] + " : " +  cvss_table['I'][integrity]['desc'] + "\n" +
-                    "Availability : " + cvss_table['A'][availability]['value'] + " : " +  cvss_table['A'][availability]['desc'] + "\n";
-                console.log("validateCVSS:textarea:" + textarea);
-
-                document.getElementById("cvssreasons").value = textarea;
-
-                //#CVSS31.calculateCVSSFromVector(vector)
-                if (badvector) {
-                    console.log("Vector is not valid:\n" + message);
-                    alert("Vector is not valid:\n" + message);
-                } else {
-
-                }
-            }
-        </script>
+        <link rel="stylesheet" type="text/css" href="cvss.css" />
+        <script type="text/javascript" async="async" src="cvss.js"></script>
     </head>
-    <body body onLoad="" bgcolor="lightblue">
+
+    <body onLoad="" bgcolor="lightblue">
+        <center>
+            <table>
+                <tr>
+                    <td colspan="4" align="center"><b>CVSS Base Score Reason Generator</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CVSS Version</td>
+                    <td colspan="1">&nbsp;</td>
+                    <td>
+                        <input type="radio" id="cvssversion" name="cvssversion" value="3.1" checked>3.1<br />
+                        <input type="radio" id="cvssversion" name="cvssversion" value="4.0" disabled />4.0 (coming soon)
+                    </td>
+                </tr>
+                <tr>
+                    <td>CVSS Vector (Base Score) <input type="text" id="cvssvector" name="cvssvector" maxlength="44" size="44" placeholder="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H" onchange="setMetricsFromVector(document.getElementById('cvssvector').value);"></td>
+                    <td>OR</td>
+                    <td>
+                        <div id="c1" class="cvss-calculator"></div>
+                        <fieldset id="baseMetricGroup">
+                            <legend id="baseMetricGroup_Legend" title="The Base Metric group represents the intrinsic  characteristics of a vulnerability that are constant over time and across user environments. Determine the vulnerable component and score Attack Vector, Attack Complexity, Privileges Required and User Interaction relative to this.">Base Score</legend>
+
+                            <div class="column column-left">
+
+                                <div class="metric">
+                                    <h3 id="AV_Heading" title="This metric reflects the context by which vulnerability exploitation is possible. The Base Score increases the more remote (logically, and physically) an attacker can be in order to exploit the vulnerable component.">Attack Vector (AV)</h3>
+                                    <input name="AV" value="N" id="AV_N" type="radio" onclick="updateScores()"><label for="AV_N" id="AV_N_Label" title="The vulnerable component is bound to the network stack and the set of possible attackers extends beyond the other options listed, up to and including the entire Internet. Such a vulnerability is often termed 'remotely exploitable' and can be thought of as an attack being exploitable at the protocol level one or more network hops away (e.g., across one or more routers).">Network (N)</label>
+                                    <input name="AV" value="A" id="AV_A" type="radio" onclick="updateScores()"><label for="AV_A" id="AV_A_Label" title="The vulnerable component is bound to the network stack, but the attack is limited at the protocol level to a logically adjacent topology. This can mean an attack must be launched from the same shared physical (e.g., Bluetooth or IEEE 802.11) or logical (e.g., local IP subnet) network, or from within a secure or otherwise limited administrative domain (e.g., MPLS, secure VPN to an administrative network zone).">Adjacent (A)</label>
+                                    <input name="AV" value="L" id="AV_L" type="radio" onclick="updateScores()"><label for="AV_L" id="AV_L_Label" title="The vulnerable component is not bound to the network stack and the attacker’s path is via read/write/execute capabilities. Either: the attacker exploits the vulnerability by accessing the target system locally (e.g., keyboard, console), or remotely (e.g., SSH); or the attacker relies on User Interaction by another person to perform actions required to exploit the vulnerability (e.g., tricking a legitimate user into opening a malicious document).">Local (L)</label>
+                                    <input name="AV" value="P" id="AV_P" type="radio" onclick="updateScores()"><label for="AV_P" id="AV_P_Label" title="The attack requires the attacker to physically touch or manipulate the vulnerable component. Physical interaction may be brief or persistent.">Physical (P)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="AC_Heading" title="This metric describes the conditions beyond the attacker’s control that must exist in order to exploit the vulnerability. Such conditions may require the collection of more information about the target or computational exceptions. The assessment of this metric excludes any requirements for user interaction in order to exploit the vulnerability. If a specific configuration is required for an attack to succeed, the Base metrics should be scored assuming the vulnerable component is in that configuration.">Attack Complexity (AC)</h3>
+                                    <input name="AC" value="L" id="AC_L" type="radio" onclick="updateScores()"><label for="AC_L" id="AC_L_Label" title="Specialized access conditions or extenuating circumstances do not exist. An attacker can expect repeatable success against the vulnerable component.">Low (L)</label>
+                                    <input name="AC" value="H" id="AC_H" type="radio" onclick="updateScores()"><label for="AC_H" id="AC_H_Label" title="A successful attack depends on conditions beyond the attacker's control. That is, a successful attack cannot be accomplished at will, but requires the attacker to invest in some measurable amount of effort in preparation or execution against the vulnerable component before a successful attack can be expected. For example, a successful attack may require an attacker to: gather knowledge about the environment in which the vulnerable target/component exists; prepare the target environment to improve exploit reliability; or inject themselves into the logical network path between the target and the resource requested by the victim in order to read and/or modify network communications (e.g., a man in the middle attack).">High (H)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="PR_Heading" title="This metric describes the level of privileges an attacker must possess before successfully exploiting the vulnerability.">Privileges Required (PR)</h3>
+                                    <input name="PR" value="N" id="PR_N" type="radio" onclick="updateScores()"><label for="PR_N" id="PR_N_Label" title="The attacker is unauthorized prior to attack, and therefore does not require any access to settings or files to carry out an attack.">None (N)</label>
+                                    <input name="PR" value="L" id="PR_L" type="radio" onclick="updateScores()"><label for="PR_L" id="PR_L_Label" title="The attacker is authorized with (i.e., requires) privileges that provide basic user capabilities that could normally affect only settings and files owned by a user. Alternatively, an attacker with Low privileges may have the ability to cause an impact only to non-sensitive resources.">Low (L)</label>
+                                    <input name="PR" value="H" id="PR_H" type="radio" onclick="updateScores()"><label for="PR_H" id="PR_H_Label" title="The attacker is authorized with (i.e., requires) privileges that provide significant (e.g., administrative) control over the vulnerable component that could affect component-wide settings and files.">High (H)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="UI_Heading" title="This metric captures the requirement for a user, other than the attacker, to participate in the successful compromise the vulnerable component. This metric determines whether the vulnerability can be exploited solely at the will of the attacker, or whether a separate user (or user-initiated process) must participate in some manner.">User Interaction (UI)</h3>
+                                    <input name="UI" value="N" id="UI_N" type="radio" onclick="updateScores()"><label for="UI_N" id="UI_N_Label" title="The vulnerable system can be exploited without any interaction from any user.">None (N)</label>
+                                    <input name="UI" value="R" id="UI_R" type="radio" onclick="updateScores()"><label for="UI_R" id="UI_R_Label" title="Successful exploitation of this vulnerability requires a user to take some action before the vulnerability can be exploited.">Required (R)</label>
+                                </div>
+
+                            </div>
 
 
-    <center>
-    <table>
-    <tr><td colspan="3" align="center"><b>CVSS Base Score Reason Generator</b></td></tr>
-    <tr>
-        <td>CVSS Version</td>
-        <td>&nbsp;</td>
-        <td>
-            <input type="radio" id="cvssversion" name="cvssversion" value="3.1" checked>3.1<br/>
-            <input type="radio" id="cvssversion" name="cvssversion" value="4.0" disabled>4.0 (coming soon)
-        </td>
-    </tr>
-    <tr><td colspan="3" align="center">&nbsp;</td></tr>
-    <tr>
-        <td>CVSS Vector (Base Score)</td>
-        <td>&nbsp;</td>
-        <td><input type="text" id="cvssvector" name="cvssvector" maxlength="44" size="44" placeholder="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"></td>
-    </tr>
-    <tr><td colspan="3" align="center">&nbsp;</td></tr>
-    <tr>
-        <td>Context</td>
-        <td>&nbsp;</td>
-        <td>
-            <input type="radio" id="output" name="output" value="spec" checked>Specification<br/>
-            <input type="radio" id="output" name="output" value="sw" disabled>Software (coming soon)<br/>
-            <input type="radio" id="output" name="output" value="fw" disabled>Firmware/BIOS (coming soon)<br/>
-            <input type="radio" id="output" name="output" value="hw" disabled>Hardware (coming soon)
-        </td>
-    </tr>
-    <tr><td colspan="3" align="center">&nbsp;</td></tr>    
-    <tr><td colspan="3" align="center"><button type="button" onclick="validateCVSS();">Generate</button></td></tr>
-    <tr><td colspan="3" align="center">&nbsp;</td></tr>
-    <tr><td colspan="3" align="center">&nbsp;</td></tr>
-    <tr><td colspan="3" align="center"><textarea id="cvssreasons" name="cvssreasons" rows="20" cols="100" disabled></textarea></td></tr>
-    </table>
-    </center>
+                            <div class="column column-right">
 
+                                <div class="metric">
+                                    <h3 id="S_Heading" title="Does a successful attack impact a component other than the vulnerable component? If so, the Base Score increases and the Confidentiality, Integrity and Authentication metrics should be scored relative to the impacted component.">Scope (S)</h3>
+                                    <input name="S" value="U" id="S_U" type="radio" onclick="updateScores()"><label for="S_U" id="S_U_Label" title="An exploited vulnerability can only affect resources managed by the same security authority. In this case, the vulnerable component and the impacted component are either the same, or both are managed by the same security authority.">Unchanged (U)</label>
+                                    <input name="S" value="C" id="S_C" type="radio" onclick="updateScores()"><label for="S_C" id="S_C_Label" title="An exploited vulnerability can affect resources beyond the security scope managed by the security authority of the vulnerable component. In this case, the vulnerable component and the impacted component are different and managed by different security authorities.">Changed (C)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="C_Heading" title="This metric measures the impact to the confidentiality of the information resources managed by a software component due to a successfully exploited vulnerability. Confidentiality refers to limiting information access and disclosure to only authorized users, as well as preventing access by, or disclosure to, unauthorized ones.">Confidentiality (C)</h3>
+                                    <input name="C" value="N" id="C_N" type="radio" onclick="updateScores()"><label for="C_N" id="C_N_Label" title="There is no loss of confidentiality within the impacted component.">None (N)</label>
+                                    <input name="C" value="L" id="C_L" type="radio" onclick="updateScores()"><label for="C_L" id="C_L_Label" title="There is some loss of confidentiality. Access to some restricted information is obtained, but the attacker does not have control over what information is obtained, or the amount or kind of loss is limited. The information disclosure does not cause a direct, serious loss to the impacted component.">Low (L)</label>
+                                    <input name="C" value="H" id="C_H" type="radio" onclick="updateScores()"><label for="C_H" id="C_H_Label" title="There is total loss of confidentiality, resulting in all resources within the impacted component being divulged to the attacker. Alternatively, access to only some restricted information is obtained, but the disclosed information presents a direct, serious impact.">High (H)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="I_Heading" title="This metric measures the impact to integrity of a successfully exploited vulnerability. Integrity refers to the trustworthiness and veracity of information.">Integrity (I)</h3>
+                                    <input name="I" value="N" id="I_N" type="radio" onclick="updateScores()"><label for="I_N" id="I_N_Label" title="There is no loss of integrity within the impacted component.">None (N)</label>
+                                    <input name="I" value="L" id="I_L" type="radio" onclick="updateScores()"><label for="I_L" id="I_L_Label" title="Modification of data is possible, but the attacker does not have control over the consequence of a modification, or the amount of modification is limited. The data modification does not have a direct, serious impact on the impacted component.">Low (L)</label>
+                                    <input name="I" value="H" id="I_H" type="radio" onclick="updateScores()"><label for="I_H" id="I_H_Label" title="There is a total loss of integrity, or a complete loss of protection. For example, the attacker is able to modify any/all files protected by the impacted component. Alternatively, only some files can be modified, but malicious modification would present a direct, serious consequence to the impacted component.">High (H)</label>
+                                </div>
+
+                                <div class="metric">
+                                    <h3 id="A_Heading" title="This metric measures the impact to the availability of the impacted component resulting from a successfully exploited vulnerability. It refers to the loss of availability of the impacted component itself, such as a networked service (e.g., web, database, email). Since availability refers to the accessibility of information resources, attacks that consume network bandwidth, processor cycles, or disk space all impact the availability of an impacted component.">Availability (A)</h3>
+                                    <input name="A" value="N" id="A_N" type="radio" onclick="updateScores()"><label for="A_N" id="A_N_Label" title="There is no impact to availability within the impacted component.">None (N)</label>
+                                    <input name="A" value="L" id="A_L" type="radio" onclick="updateScores()"><label for="A_L" id="A_L_Label" title="Performance is reduced or there are interruptions in resource availability. Even if repeated exploitation of the vulnerability is possible, the attacker does not have the ability to completely deny service to legitimate users. The resources in the impacted component are either partially available all of the time, or fully available only some of the time, but overall there is no direct, serious consequence to the impacted component.">Low (L)</label>
+                                    <input name="A" value="H" id="A_H" type="radio" onclick="updateScores()"><label for="A_H" id="A_H_Label" title="There is total loss of availability, resulting in the attacker being able to fully deny access to resources in the impacted component; this loss is either sustained (while the attacker continues to deliver the attack) or persistent (the condition persists even after the attack has completed). Alternatively, the attacker has the ability to deny some availability, but the loss of availability presents a direct, serious consequence to the impacted component (e.g., the attacker cannot disrupt existing connections, but can prevent new connections; the attacker can repeatedly exploit a vulnerability that, in each instance of a successful attack, leaks a only small amount of memory, but after repeated exploitation causes a service to become completely unavailable).">High (H)</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="scoreRating">
+                                <p class="needBaseMetrics">Select values for all base metrics to generate score</p>
+                                <span id="baseMetricScore"></span>
+                                <span id="baseSeverity"></span>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Context</td>
+                    <td colspan="1">&nbsp;</td>
+                    <td>
+                        <input type="radio" id="output" name="output" value="spec" checked>Specification (<a href="https://www.first.org/cvss/v3.1/specification-document" target="_blank">https://www.first.org/cvss/v3.1/specification-document</a>)<br />
+                        <input type="radio" id="output" name="output" value="sw" disabled>Software (coming soon)<br />
+                        <input type="radio" id="output" name="output" value="fw" disabled>Firmware/BIOS (coming soon)<br />
+                        <input type="radio" id="output" name="output" value="hw" disabled>Hardware (coming soon)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button type="button" name="generate" id="generate" onclick="validateCVSS31();" disabled>Generate Reasons</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">&nbsp;</td>
+                </tr>         
+                <tr>
+                    <td colspan="3" align="center">
+                        <textarea id="cvssreasons" name="cvssreasons" rows="20" cols="200" disabled></textarea>
+                    </td>
+                </tr>
+            </table>
+        </center>
     </body>
+
 </html>
