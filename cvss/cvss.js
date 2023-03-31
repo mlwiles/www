@@ -214,8 +214,8 @@ function updateScores() {
         while (i--) {
             hide(L[i])
         }
-        parentNode(text("#baseMetricScore", result.baseMetricScore),
-            '.scoreRating').className = 'scoreRating ' + result.baseSeverity.toLowerCase();
+        parentNode(text("#baseMetricScore", result.baseMetricScore),'.scoreRating').className = 'scoreRating ' + result.baseSeverity.toLowerCase();
+        text("#baseSeverity","("+result.baseSeverity+")");
         document.getElementById("cvssvector").value = result.vectorString;
         document.getElementById("generate").disabled = false;
         window.location.hash=result.vectorString
