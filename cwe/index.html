@@ -261,7 +261,7 @@
                 }
             }
             function checkVersion() {
-                var current = 4.12;
+                var current = 4.13;
                 let xmlHttpReq = new XMLHttpRequest();
                 xmlHttpReq.open("GET", "https://cwe.mitre.org/data/index.html", false); 
                 xmlHttpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -279,7 +279,7 @@
     <center>
     <table>
     <tr><td colspan="2" align="center"><b>CWETree</b></td></tr>
-    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.12 (2023-06-29)</b></td></tr>
+    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.13 (2023-10-26)</b></td></tr>
     <!-- <tr><td>&nbsp;</td><td td align="right"><input type="button" onclick="checkVersion();" id="versionBTN" value="Check Version"/></td></tr> -->
     <tr><td><b>TOTAL</b> Number of CWE Weaknesses:</td><td align="right" id="cweIDCountDisplay"></td></tr>
     <tr><td>Number of Deprecated CWE Weaknesses:</td><td align="right" id="cweIDCountStatusDeprecatedDisplay"></td></tr>
@@ -2073,10 +2073,6 @@
 </li>
 <li><input type="checkbox" id="664:665" name="664:665" value="664:665" onclick="checkTree('664:665');"><span class="caret"><span id="div664:665" class="cwedata" data-hover="CWE-665:Improper Initialization -- The product does not initialize or incorrectly initializes a resource, which might leave the resource in an unexpected state when it is accessed or used."><a href="https://cwe.mitre.org/data/definitions/665.html" target="_blank">CWE-665</a>:Improper Initialization</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:665:454" name="664:665:454" value="664:665:454" onclick="checkTree('664:665:454');"><span class="caret"><span id="div664:665:454" class="cwedata" data-hover="CWE-454:External Initialization of Trusted Variables or Data Stores -- The product initializes critical internal variables or data stores using inputs that can be modified by untrusted actors."><a href="https://cwe.mitre.org/data/definitions/454.html" target="_blank">CWE-454</a>:External Initialization of Trusted Variables or Data Stores</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="664:665:455" name="664:665:455" value="664:665:455" onclick="checkTree('664:665:455');"><span class="caret"><span id="div664:665:455" class="cwedata" data-hover="CWE-455:Non-exit on Failed Initialization -- The product does not exit or otherwise modify its operation when security-relevant errors occur during initialization, such as when a configuration file has a format error or a hardware security module (HSM) cannot be activated, which can cause the product to execute in a less secure fashion than intended by the administrator."><a href="https://cwe.mitre.org/data/definitions/455.html" target="_blank">CWE-455</a>:Non-exit on Failed Initialization</span></span>
 <ul class="nested">
 </ul>
@@ -2125,16 +2121,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="664:665:1051" name="664:665:1051" value="664:665:1051" onclick="checkTree('664:665:1051');"><span class="caret"><span id="div664:665:1051" class="cwedata" data-hover="CWE-1051:Initialization with Hard-Coded Network Resource Configuration Data -- The product initializes data using hard-coded values that act as network resource identifiers."><a href="https://cwe.mitre.org/data/definitions/1051.html" target="_blank">CWE-1051</a>:Initialization with Hard-Coded Network Resource Configuration Data</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="664:665:1052" name="664:665:1052" value="664:665:1052" onclick="checkTree('664:665:1052');"><span class="caret"><span id="div664:665:1052" class="cwedata" data-hover="CWE-1052:Excessive Use of Hard-Coded Literals in Initialization -- The product initializes a data element using a hard-coded
-					literal that is not a simple integer or static constant element."><a href="https://cwe.mitre.org/data/definitions/1052.html" target="_blank">CWE-1052</a>:Excessive Use of Hard-Coded Literals in Initialization</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="664:665:1188" name="664:665:1188" value="664:665:1188" onclick="checkTree('664:665:1188');"><span class="caret"><span id="div664:665:1188" class="cwedata" data-hover="CWE-1188:Insecure Default Initialization of Resource -- The product initializes or sets a resource with a default that is intended to be changed by the administrator, but the default is not secure."><a href="https://cwe.mitre.org/data/definitions/1188.html" target="_blank">CWE-1188</a>:Insecure Default Initialization of Resource</span></span>
+<li><input type="checkbox" id="664:665:1188" name="664:665:1188" value="664:665:1188" onclick="checkTree('664:665:1188');"><span class="caret"><span id="div664:665:1188" class="cwedata" data-hover="CWE-1188:Initialization of a Resource with an Insecure Default -- The product initializes or sets a resource with a default that is intended to be changed by the administrator, but the default is not secure."><a href="https://cwe.mitre.org/data/definitions/1188.html" target="_blank">CWE-1188</a>:Initialization of a Resource with an Insecure Default</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:665:1188:453" name="664:665:1188:453" value="664:665:1188:453" onclick="checkTree('664:665:1188:453');"><span class="caret"><span id="div664:665:1188:453" class="cwedata" data-hover="CWE-453:Insecure Default Variable Initialization -- The product, by default, initializes an internal variable with an insecure or less secure value than is possible."><a href="https://cwe.mitre.org/data/definitions/453.html" target="_blank">CWE-453</a>:Insecure Default Variable Initialization</span></span>
 <ul class="nested">
@@ -2142,12 +2129,37 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="664:665:1221" name="664:665:1221" value="664:665:1221" onclick="checkTree('664:665:1221');"><span class="caret"><span id="div664:665:1221" class="cwedata" data-hover="CWE-1221:Incorrect Register Defaults or Module Parameters -- Hardware description language code incorrectly defines register defaults or hardware IP parameters to insecure values."><a href="https://cwe.mitre.org/data/definitions/1221.html" target="_blank">CWE-1221</a>:Incorrect Register Defaults or Module Parameters</span></span>
+<li><input type="checkbox" id="664:665:1279" name="664:665:1279" value="664:665:1279" onclick="checkTree('664:665:1279');"><span class="caret"><span id="div664:665:1279" class="cwedata" data-hover="CWE-1279:Cryptographic Operations are run Before Supporting Units are Ready -- Performing cryptographic operations without ensuring that the supporting inputs are ready to supply valid data may compromise the cryptographic result."><a href="https://cwe.mitre.org/data/definitions/1279.html" target="_blank">CWE-1279</a>:Cryptographic Operations are run Before Supporting Units are Ready</span></span>
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="664:665:1279" name="664:665:1279" value="664:665:1279" onclick="checkTree('664:665:1279');"><span class="caret"><span id="div664:665:1279" class="cwedata" data-hover="CWE-1279:Cryptographic Operations are run Before Supporting Units are Ready -- Performing cryptographic operations without ensuring that the supporting inputs are ready to supply valid data may compromise the cryptographic result."><a href="https://cwe.mitre.org/data/definitions/1279.html" target="_blank">CWE-1279</a>:Cryptographic Operations are run Before Supporting Units are Ready</span></span>
+<li><input type="checkbox" id="664:665:1419" name="664:665:1419" value="664:665:1419" onclick="checkTree('664:665:1419');"><span class="caret"><span id="div664:665:1419" class="cwedata" data-hover="CWE-1419:Incorrect Initialization of Resource -- The product attempts to initialize a resource but does not correctly do so, which might leave the resource in an unexpected, incorrect, or insecure state when it is accessed."><a href="https://cwe.mitre.org/data/definitions/1419.html" target="_blank">CWE-1419</a>:Incorrect Initialization of Resource</span></span>
 <ul class="nested">
+<li><input type="checkbox" id="664:665:1419:454" name="664:665:1419:454" value="664:665:1419:454" onclick="checkTree('664:665:1419:454');"><span class="caret"><span id="div664:665:1419:454" class="cwedata" data-hover="CWE-454:External Initialization of Trusted Variables or Data Stores -- The product initializes critical internal variables or data stores using inputs that can be modified by untrusted actors."><a href="https://cwe.mitre.org/data/definitions/454.html" target="_blank">CWE-454</a>:External Initialization of Trusted Variables or Data Stores</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:665:1419:1051" name="664:665:1419:1051" value="664:665:1419:1051" onclick="checkTree('664:665:1419:1051');"><span class="caret"><span id="div664:665:1419:1051" class="cwedata" data-hover="CWE-1051:Initialization with Hard-Coded Network Resource Configuration Data -- The product initializes data using hard-coded values that act as network resource identifiers."><a href="https://cwe.mitre.org/data/definitions/1051.html" target="_blank">CWE-1051</a>:Initialization with Hard-Coded Network Resource Configuration Data</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:665:1419:1052" name="664:665:1419:1052" value="664:665:1419:1052" onclick="checkTree('664:665:1419:1052');"><span class="caret"><span id="div664:665:1419:1052" class="cwedata" data-hover="CWE-1052:Excessive Use of Hard-Coded Literals in Initialization -- The product initializes a data element using a hard-coded
+					literal that is not a simple integer or static constant element."><a href="https://cwe.mitre.org/data/definitions/1052.html" target="_blank">CWE-1052</a>:Excessive Use of Hard-Coded Literals in Initialization</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:665:1419:1188" name="664:665:1419:1188" value="664:665:1419:1188" onclick="checkTree('664:665:1419:1188');"><span class="caret"><span id="div664:665:1419:1188" class="cwedata" data-hover="CWE-1188:Initialization of a Resource with an Insecure Default -- The product initializes or sets a resource with a default that is intended to be changed by the administrator, but the default is not secure."><a href="https://cwe.mitre.org/data/definitions/1188.html" target="_blank">CWE-1188</a>:Initialization of a Resource with an Insecure Default</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="664:665:1419:1188:453" name="664:665:1419:1188:453" value="664:665:1419:1188:453" onclick="checkTree('664:665:1419:1188:453');"><span class="caret"><span id="div664:665:1419:1188:453" class="cwedata" data-hover="CWE-453:Insecure Default Variable Initialization -- The product, by default, initializes an internal variable with an insecure or less secure value than is possible."><a href="https://cwe.mitre.org/data/definitions/453.html" target="_blank">CWE-453</a>:Insecure Default Variable Initialization</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
+<li><input type="checkbox" id="664:665:1419:1221" name="664:665:1419:1221" value="664:665:1419:1221" onclick="checkTree('664:665:1419:1221');"><span class="caret"><span id="div664:665:1419:1221" class="cwedata" data-hover="CWE-1221:Incorrect Register Defaults or Module Parameters -- Hardware description language code incorrectly defines register defaults or hardware Intellectual Property (IP) parameters to insecure values."><a href="https://cwe.mitre.org/data/definitions/1221.html" target="_blank">CWE-1221</a>:Incorrect Register Defaults or Module Parameters</span></span>
+<ul class="nested">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -3551,6 +3563,10 @@
 </ul>
 </li>
 <li><input type="checkbox" id="691:1265" name="691:1265" value="691:1265" onclick="checkTree('691:1265');"><span class="caret"><span id="div691:1265" class="cwedata" data-hover="CWE-1265:Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls -- During execution of non-reentrant code, the product performs a call that unintentionally produces a nested invocation of the non-reentrant code."><a href="https://cwe.mitre.org/data/definitions/1265.html" target="_blank">CWE-1265</a>:Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="691:1279" name="691:1279" value="691:1279" onclick="checkTree('691:1279');"><span class="caret"><span id="div691:1279" class="cwedata" data-hover="CWE-1279:Cryptographic Operations are run Before Supporting Units are Ready -- Performing cryptographic operations without ensuring that the supporting inputs are ready to supply valid data may compromise the cryptographic result."><a href="https://cwe.mitre.org/data/definitions/1279.html" target="_blank">CWE-1279</a>:Cryptographic Operations are run Before Supporting Units are Ready</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -6219,9 +6235,9 @@ intended arguments, options, or switches within that command string."><a href="h
                 });
             }
         </script>
-        <input type="hidden" id="cweIDCountHidden" value="933">
+        <input type="hidden" id="cweIDCountHidden" value="934">
         <input type="hidden" id="cweIDCountStatusDraftHidden" value="431">
-        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="476">
+        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="477">
         <input type="hidden" id="cweIDCountStatusStableHidden" value="26">
         <input type="hidden" id="cweIDCountStatusDeprecatedHidden" value="25">
         <input type="hidden" id="cweIDCountStatusOtherHidden" value="0">
