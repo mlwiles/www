@@ -261,7 +261,7 @@
                 }
             }
             function checkVersion() {
-                var current = 4.13;
+                var current = 4.14;
                 let xmlHttpReq = new XMLHttpRequest();
                 xmlHttpReq.open("GET", "https://cwe.mitre.org/data/index.html", false); 
                 xmlHttpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -279,7 +279,7 @@
     <center>
     <table>
     <tr><td colspan="2" align="center"><b>CWETree</b></td></tr>
-    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.13 (2023-10-26)</b></td></tr>
+    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.14 (2024-02-29)</b></td></tr>
     <!-- <tr><td>&nbsp;</td><td td align="right"><input type="button" onclick="checkVersion();" id="versionBTN" value="Check Version"/></td></tr> -->
     <tr><td><b>TOTAL</b> Number of CWE Weaknesses:</td><td align="right" id="cweIDCountDisplay"></td></tr>
     <tr><td>Number of Deprecated CWE Weaknesses:</td><td align="right" id="cweIDCountStatusDeprecatedDisplay"></td></tr>
@@ -1222,7 +1222,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:1294:1302" name="284:1294:1302" value="284:1294:1302" onclick="checkTree('284:1294:1302');"><span class="caret"><span id="div284:1294:1302" class="cwedata" data-hover="CWE-1302:Missing Security Identifier -- The product implements a security identifier mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity. A transaction is sent without a security identifier."><a href="https://cwe.mitre.org/data/definitions/1302.html" target="_blank">CWE-1302</a>:Missing Security Identifier</span></span>
+<li><input type="checkbox" id="284:1294:1302" name="284:1294:1302" value="284:1294:1302" onclick="checkTree('284:1294:1302');"><span class="caret"><span id="div284:1294:1302" class="cwedata" data-hover="CWE-1302:Missing Source Identifier in Entity Transactions on a System-On-Chip (SOC) -- The product implements a security identifier mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity. A transaction is sent without a security identifier."><a href="https://cwe.mitre.org/data/definitions/1302.html" target="_blank">CWE-1302</a>:Missing Source Identifier in Entity Transactions on a System-On-Chip (SOC)</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -2802,6 +2802,32 @@
 </li>
 </ul>
 </li>
+<li><input type="checkbox" id="664:669:1420" name="664:669:1420" value="664:669:1420" onclick="checkTree('664:669:1420');"><span class="caret"><span id="div664:669:1420" class="cwedata" data-hover="CWE-1420:Exposure of Sensitive Information during Transient Execution -- A processor event or prediction may allow incorrect operations (or correct operations with incorrect data) to execute transiently, potentially exposing data over a covert channel."><a href="https://cwe.mitre.org/data/definitions/1420.html" target="_blank">CWE-1420</a>:Exposure of Sensitive Information during Transient Execution</span></span>
+<ul class="nested">
+<li><input type="checkbox" id="664:669:1420:1421" name="664:669:1420:1421" value="664:669:1420:1421" onclick="checkTree('664:669:1420:1421');"><span class="caret"><span id="div664:669:1420:1421" class="cwedata" data-hover="CWE-1421:Exposure of Sensitive Information in Shared Microarchitectural Structures during Transient Execution -- 
+			A processor event may allow transient operations to access
+			architecturally restricted data (for example, in another address
+			space) in a shared microarchitectural structure (for example, a CPU
+			cache), potentially exposing the data over a covert channel.
+		  "><a href="https://cwe.mitre.org/data/definitions/1421.html" target="_blank">CWE-1421</a>:Exposure of Sensitive Information in Shared Microarchitectural Structures during Transient Execution</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:669:1420:1422" name="664:669:1420:1422" value="664:669:1420:1422" onclick="checkTree('664:669:1420:1422');"><span class="caret"><span id="div664:669:1420:1422" class="cwedata" data-hover="CWE-1422:Exposure of Sensitive Information caused by Incorrect Data Forwarding during Transient Execution -- A processor event or prediction may allow incorrect or stale data to
+		  be forwarded to transient operations, potentially exposing data over a
+		  covert channel."><a href="https://cwe.mitre.org/data/definitions/1422.html" target="_blank">CWE-1422</a>:Exposure of Sensitive Information caused by Incorrect Data Forwarding during Transient Execution</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="664:669:1420:1423" name="664:669:1420:1423" value="664:669:1420:1423" onclick="checkTree('664:669:1420:1423');"><span class="caret"><span id="div664:669:1420:1423" class="cwedata" data-hover="CWE-1423:Exposure of Sensitive Information caused by Shared Microarchitectural Predictor State that Influences Transient Execution -- Shared microarchitectural predictor state may allow code to influence
+				transient execution across a hardware boundary, potentially exposing
+				data that is accessible beyond the boundary over a covert channel.
+			"><a href="https://cwe.mitre.org/data/definitions/1423.html" target="_blank">CWE-1423</a>:Exposure of Sensitive Information caused by Shared Microarchitectural Predictor State that Influences Transient Execution</span></span>
+<ul class="nested">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><input type="checkbox" id="664:673" name="664:673" value="664:673" onclick="checkTree('664:673');"><span class="caret"><span id="div664:673" class="cwedata" data-hover="CWE-673:External Influence of Sphere Definition -- The product does not prevent the definition of control spheres from external actors."><a href="https://cwe.mitre.org/data/definitions/673.html" target="_blank">CWE-673</a>:External Influence of Sphere Definition</span></span>
@@ -4115,20 +4141,20 @@
 </li>
 <li><input type="checkbox" id="703" name="703" value="703" onclick="checkTree('703');"><span class="caret"><span id="div703" class="cwedata" data-hover="CWE-703:Improper Check or Handling of Exceptional Conditions -- The product does not properly anticipate or handle exceptional conditions that rarely occur during normal operation of the product."><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a>:Improper Check or Handling of Exceptional Conditions</span></span>
 <ul class="nested">
-<li><input type="checkbox" id="703:166" name="703:166" value="703:166" onclick="checkTree('703:166');"><span class="caret"><span id="div703:166" class="cwedata" data-hover="CWE-166:Improper Handling of Missing Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an expected special element is missing."><a href="https://cwe.mitre.org/data/definitions/166.html" target="_blank">CWE-166</a>:Improper Handling of Missing Special Element</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="703:167" name="703:167" value="703:167" onclick="checkTree('703:167');"><span class="caret"><span id="div703:167" class="cwedata" data-hover="CWE-167:Improper Handling of Additional Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an additional unexpected special element is provided."><a href="https://cwe.mitre.org/data/definitions/167.html" target="_blank">CWE-167</a>:Improper Handling of Additional Special Element</span></span>
-<ul class="nested">
-</ul>
-</li>
-<li><input type="checkbox" id="703:168" name="703:168" value="703:168" onclick="checkTree('703:168');"><span class="caret"><span id="div703:168" class="cwedata" data-hover="CWE-168:Improper Handling of Inconsistent Special Elements -- The product does not properly handle input in which an inconsistency exists between two or more special characters or reserved words."><a href="https://cwe.mitre.org/data/definitions/168.html" target="_blank">CWE-168</a>:Improper Handling of Inconsistent Special Elements</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="703:228" name="703:228" value="703:228" onclick="checkTree('703:228');"><span class="caret"><span id="div703:228" class="cwedata" data-hover="CWE-228:Improper Handling of Syntactically Invalid Structure -- The product does not handle or incorrectly handles input that is not syntactically well-formed with respect to the associated specification."><a href="https://cwe.mitre.org/data/definitions/228.html" target="_blank">CWE-228</a>:Improper Handling of Syntactically Invalid Structure</span></span>
 <ul class="nested">
+<li><input type="checkbox" id="703:228:166" name="703:228:166" value="703:228:166" onclick="checkTree('703:228:166');"><span class="caret"><span id="div703:228:166" class="cwedata" data-hover="CWE-166:Improper Handling of Missing Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an expected special element is missing."><a href="https://cwe.mitre.org/data/definitions/166.html" target="_blank">CWE-166</a>:Improper Handling of Missing Special Element</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="703:228:167" name="703:228:167" value="703:228:167" onclick="checkTree('703:228:167');"><span class="caret"><span id="div703:228:167" class="cwedata" data-hover="CWE-167:Improper Handling of Additional Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an additional unexpected special element is provided."><a href="https://cwe.mitre.org/data/definitions/167.html" target="_blank">CWE-167</a>:Improper Handling of Additional Special Element</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="703:228:168" name="703:228:168" value="703:228:168" onclick="checkTree('703:228:168');"><span class="caret"><span id="div703:228:168" class="cwedata" data-hover="CWE-168:Improper Handling of Inconsistent Special Elements -- The product does not properly handle input in which an inconsistency exists between two or more special characters or reserved words."><a href="https://cwe.mitre.org/data/definitions/168.html" target="_blank">CWE-168</a>:Improper Handling of Inconsistent Special Elements</span></span>
+<ul class="nested">
+</ul>
+</li>
 <li><input type="checkbox" id="703:228:229" name="703:228:229" value="703:228:229" onclick="checkTree('703:228:229');"><span class="caret"><span id="div703:228:229" class="cwedata" data-hover="CWE-229:Improper Handling of Values -- The product does not properly handle when the expected number of values for parameters, fields, or arguments is not provided in input, or if those values are undefined."><a href="https://cwe.mitre.org/data/definitions/229.html" target="_blank">CWE-229</a>:Improper Handling of Values</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="703:228:229:230" name="703:228:229:230" value="703:228:229:230" onclick="checkTree('703:228:229:230');"><span class="caret"><span id="div703:228:229:230" class="cwedata" data-hover="CWE-230:Improper Handling of Missing Values -- The product does not handle or incorrectly handles when a parameter, field, or argument name is specified, but the associated value is missing, i.e. it is empty, blank, or null."><a href="https://cwe.mitre.org/data/definitions/230.html" target="_blank">CWE-230</a>:Improper Handling of Missing Values</span></span>
@@ -4193,10 +4219,6 @@
 <ul class="nested">
 </ul>
 </li>
-</ul>
-</li>
-<li><input type="checkbox" id="703:333" name="703:333" value="703:333" onclick="checkTree('703:333');"><span class="caret"><span id="div703:333" class="cwedata" data-hover="CWE-333:Improper Handling of Insufficient Entropy in TRNG -- True random number generators (TRNG) generally have a limited source of entropy and therefore can fail or block."><a href="https://cwe.mitre.org/data/definitions/333.html" target="_blank">CWE-333</a>:Improper Handling of Insufficient Entropy in TRNG</span></span>
-<ul class="nested">
 </ul>
 </li>
 <li><input type="checkbox" id="703:391" name="703:391" value="703:391" onclick="checkTree('703:391');"><span class="caret"><span id="div703:391" class="cwedata" data-hover="CWE-391:Unchecked Error Condition -- [PLANNED FOR DEPRECATION. SEE MAINTENANCE NOTES AND CONSIDER CWE-252, CWE-248, OR CWE-1069.] Ignoring exceptions and other error conditions may allow an attacker to induce unexpected behavior unnoticed."><a href="https://cwe.mitre.org/data/definitions/391.html" target="_blank">CWE-391</a>:Unchecked Error Condition</span></span>
@@ -4294,6 +4316,10 @@
 </ul>
 </li>
 <li><input type="checkbox" id="703:755:280" name="703:755:280" value="703:755:280" onclick="checkTree('703:755:280');"><span class="caret"><span id="div703:755:280" class="cwedata" data-hover="CWE-280:Improper Handling of Insufficient Permissions or Privileges  -- The product does not handle or incorrectly handles when it has insufficient privileges to access resources or functionality as specified by their permissions. This may cause it to follow unexpected code paths that may leave the product in an invalid state."><a href="https://cwe.mitre.org/data/definitions/280.html" target="_blank">CWE-280</a>:Improper Handling of Insufficient Permissions or Privileges </span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="703:755:333" name="703:755:333" value="703:755:333" onclick="checkTree('703:755:333');"><span class="caret"><span id="div703:755:333" class="cwedata" data-hover="CWE-333:Improper Handling of Insufficient Entropy in TRNG -- True random number generators (TRNG) generally have a limited source of entropy and therefore can fail or block."><a href="https://cwe.mitre.org/data/definitions/333.html" target="_blank">CWE-333</a>:Improper Handling of Insufficient Entropy in TRNG</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -5247,6 +5273,18 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 <li><input type="checkbox" id="707:228" name="707:228" value="707:228" onclick="checkTree('707:228');"><span class="caret"><span id="div707:228" class="cwedata" data-hover="CWE-228:Improper Handling of Syntactically Invalid Structure -- The product does not handle or incorrectly handles input that is not syntactically well-formed with respect to the associated specification."><a href="https://cwe.mitre.org/data/definitions/228.html" target="_blank">CWE-228</a>:Improper Handling of Syntactically Invalid Structure</span></span>
 <ul class="nested">
+<li><input type="checkbox" id="707:228:166" name="707:228:166" value="707:228:166" onclick="checkTree('707:228:166');"><span class="caret"><span id="div707:228:166" class="cwedata" data-hover="CWE-166:Improper Handling of Missing Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an expected special element is missing."><a href="https://cwe.mitre.org/data/definitions/166.html" target="_blank">CWE-166</a>:Improper Handling of Missing Special Element</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="707:228:167" name="707:228:167" value="707:228:167" onclick="checkTree('707:228:167');"><span class="caret"><span id="div707:228:167" class="cwedata" data-hover="CWE-167:Improper Handling of Additional Special Element -- The product receives input from an upstream component, but it does not handle or incorrectly handles when an additional unexpected special element is provided."><a href="https://cwe.mitre.org/data/definitions/167.html" target="_blank">CWE-167</a>:Improper Handling of Additional Special Element</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="707:228:168" name="707:228:168" value="707:228:168" onclick="checkTree('707:228:168');"><span class="caret"><span id="div707:228:168" class="cwedata" data-hover="CWE-168:Improper Handling of Inconsistent Special Elements -- The product does not properly handle input in which an inconsistency exists between two or more special characters or reserved words."><a href="https://cwe.mitre.org/data/definitions/168.html" target="_blank">CWE-168</a>:Improper Handling of Inconsistent Special Elements</span></span>
+<ul class="nested">
+</ul>
+</li>
 <li><input type="checkbox" id="707:228:229" name="707:228:229" value="707:228:229" onclick="checkTree('707:228:229');"><span class="caret"><span id="div707:228:229" class="cwedata" data-hover="CWE-229:Improper Handling of Values -- The product does not properly handle when the expected number of values for parameters, fields, or arguments is not provided in input, or if those values are undefined."><a href="https://cwe.mitre.org/data/definitions/229.html" target="_blank">CWE-229</a>:Improper Handling of Values</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="707:228:229:230" name="707:228:229:230" value="707:228:229:230" onclick="checkTree('707:228:229:230');"><span class="caret"><span id="div707:228:229:230" class="cwedata" data-hover="CWE-230:Improper Handling of Missing Values -- The product does not handle or incorrectly handles when a parameter, field, or argument name is specified, but the associated value is missing, i.e. it is empty, blank, or null."><a href="https://cwe.mitre.org/data/definitions/230.html" target="_blank">CWE-230</a>:Improper Handling of Missing Values</span></span>
@@ -5517,10 +5555,6 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="710:594" name="710:594" value="710:594" onclick="checkTree('710:594');"><span class="caret"><span id="div710:594" class="cwedata" data-hover="CWE-594:J2EE Framework: Saving Unserializable Objects to Disk -- When the J2EE container attempts to write unserializable objects to disk there is no guarantee that the process will complete successfully."><a href="https://cwe.mitre.org/data/definitions/594.html" target="_blank">CWE-594</a>:J2EE Framework: Saving Unserializable Objects to Disk</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="710:657" name="710:657" value="710:657" onclick="checkTree('710:657');"><span class="caret"><span id="div710:657" class="cwedata" data-hover="CWE-657:Violation of Secure Design Principles -- The product violates well-established principles for secure design."><a href="https://cwe.mitre.org/data/definitions/657.html" target="_blank">CWE-657</a>:Violation of Secure Design Principles</span></span>
 <ul class="nested">
 <li><input type="checkbox" id="710:657:250" name="710:657:250" value="710:657:250" onclick="checkTree('710:657:250');"><span class="caret"><span id="div710:657:250" class="cwedata" data-hover="CWE-250:Execution with Unnecessary Privileges -- The product performs an operation at a privilege level that is higher than the minimum level required, which creates new weaknesses or amplifies the consequences of other weaknesses."><a href="https://cwe.mitre.org/data/definitions/250.html" target="_blank">CWE-250</a>:Execution with Unnecessary Privileges</span></span>
@@ -5607,7 +5641,7 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="710:657:1192" name="710:657:1192" value="710:657:1192" onclick="checkTree('710:657:1192');"><span class="caret"><span id="div710:657:1192" class="cwedata" data-hover="CWE-1192:System-on-Chip (SoC) Using Components without Unique, Immutable Identifiers -- The System-on-Chip (SoC) does not have unique, immutable identifiers for each of its components."><a href="https://cwe.mitre.org/data/definitions/1192.html" target="_blank">CWE-1192</a>:System-on-Chip (SoC) Using Components without Unique, Immutable Identifiers</span></span>
+<li><input type="checkbox" id="710:657:1192" name="710:657:1192" value="710:657:1192" onclick="checkTree('710:657:1192');"><span class="caret"><span id="div710:657:1192" class="cwedata" data-hover="CWE-1192:Improper Identifier for IP Block used in System-On-Chip (SOC) -- The System-on-Chip (SoC) does not have unique, immutable identifiers for each of its components."><a href="https://cwe.mitre.org/data/definitions/1192.html" target="_blank">CWE-1192</a>:Improper Identifier for IP Block used in System-On-Chip (SOC)</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -5881,12 +5915,6 @@ intended arguments, options, or switches within that command string."><a href="h
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="710:1070" name="710:1070" value="710:1070" onclick="checkTree('710:1070');"><span class="caret"><span id="div710:1070" class="cwedata" data-hover="CWE-1070:Serializable Data Element Containing non-Serializable Item Elements -- The product contains a serializable, storable data element such as a field or member,
-					but the data element contains member elements that are not
-					serializable."><a href="https://cwe.mitre.org/data/definitions/1070.html" target="_blank">CWE-1070</a>:Serializable Data Element Containing non-Serializable Item Elements</span></span>
-<ul class="nested">
-</ul>
-</li>
 <li><input type="checkbox" id="710:1076" name="710:1076" value="710:1076" onclick="checkTree('710:1076');"><span class="caret"><span id="div710:1076" class="cwedata" data-hover="CWE-1076:Insufficient Adherence to Expected Conventions -- The product's architecture, source code, design, documentation,
 					or other artifact does not follow required conventions."><a href="https://cwe.mitre.org/data/definitions/1076.html" target="_blank">CWE-1076</a>:Insufficient Adherence to Expected Conventions</span></span>
 <ul class="nested">
@@ -5894,7 +5922,17 @@ intended arguments, options, or switches within that command string."><a href="h
 <ul class="nested">
 </ul>
 </li>
+<li><input type="checkbox" id="710:1076:594" name="710:1076:594" value="710:1076:594" onclick="checkTree('710:1076:594');"><span class="caret"><span id="div710:1076:594" class="cwedata" data-hover="CWE-594:J2EE Framework: Saving Unserializable Objects to Disk -- When the J2EE container attempts to write unserializable objects to disk there is no guarantee that the process will complete successfully."><a href="https://cwe.mitre.org/data/definitions/594.html" target="_blank">CWE-594</a>:J2EE Framework: Saving Unserializable Objects to Disk</span></span>
+<ul class="nested">
+</ul>
+</li>
 <li><input type="checkbox" id="710:1076:1045" name="710:1076:1045" value="710:1076:1045" onclick="checkTree('710:1076:1045');"><span class="caret"><span id="div710:1076:1045" class="cwedata" data-hover="CWE-1045:Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor -- A parent class has a virtual destructor method, but the parent has a child class that does not have a virtual destructor."><a href="https://cwe.mitre.org/data/definitions/1045.html" target="_blank">CWE-1045</a>:Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor</span></span>
+<ul class="nested">
+</ul>
+</li>
+<li><input type="checkbox" id="710:1076:1070" name="710:1076:1070" value="710:1076:1070" onclick="checkTree('710:1076:1070');"><span class="caret"><span id="div710:1076:1070" class="cwedata" data-hover="CWE-1070:Serializable Data Element Containing non-Serializable Item Elements -- The product contains a serializable, storable data element such as a field or member,
+					but the data element contains member elements that are not
+					serializable."><a href="https://cwe.mitre.org/data/definitions/1070.html" target="_blank">CWE-1070</a>:Serializable Data Element Containing non-Serializable Item Elements</span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -6235,9 +6273,9 @@ intended arguments, options, or switches within that command string."><a href="h
                 });
             }
         </script>
-        <input type="hidden" id="cweIDCountHidden" value="934">
+        <input type="hidden" id="cweIDCountHidden" value="938">
         <input type="hidden" id="cweIDCountStatusDraftHidden" value="431">
-        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="477">
+        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="481">
         <input type="hidden" id="cweIDCountStatusStableHidden" value="26">
         <input type="hidden" id="cweIDCountStatusDeprecatedHidden" value="25">
         <input type="hidden" id="cweIDCountStatusOtherHidden" value="0">
