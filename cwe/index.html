@@ -277,7 +277,7 @@
                 }
             }
             function checkVersion() {
-                var current = 4.15;
+                var current = 4.16;
                 let xmlHttpReq = new XMLHttpRequest();
                 xmlHttpReq.open("GET", "https://cwe.mitre.org/data/index.html", false); 
                 xmlHttpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -295,7 +295,7 @@
     <center>
     <table>
     <tr><td colspan="2" align="center"><b>CWETree</b></td></tr>
-    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.15 (2024-07-16)</b></td></tr>
+    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.16 (2024-11-19)</b></td></tr>
     <!-- <tr><td>&nbsp;</td><td td align="right"><input type="button" onclick="checkVersion();" id="versionBTN" value="Check Version"/></td></tr> -->
     <tr><td><b>TOTAL</b> Number of CWE Weaknesses:</td><td align="right" id="cweIDCountDisplay"></td></tr>
     <tr><td>Number of Deprecated (Status) CWE Weaknesses:</td><td align="right" id="cweIDCountStatusDeprecatedDisplay"></td></tr>
@@ -556,7 +556,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:285:863" name="284:285:863" value="284:285:863" onclick="checkTree('284:285:863');"><span class="caret"><span id="div284:285:863" class="cwedata" data-hover="CWE-863:Incorrect Authorization -- The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check. This allows attackers to bypass intended access restrictions."><a href="https://cwe.mitre.org/data/definitions/863.html" target="_blank">CWE-863</a>:Incorrect Authorization <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="284:285:863" name="284:285:863" value="284:285:863" onclick="checkTree('284:285:863');"><span class="caret"><span id="div284:285:863" class="cwedata" data-hover="CWE-863:Incorrect Authorization -- The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check."><a href="https://cwe.mitre.org/data/definitions/863.html" target="_blank">CWE-863</a>:Incorrect Authorization <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="284:285:863:551" name="284:285:863:551" value="284:285:863:551" onclick="checkTree('284:285:863:551');"><span class="caret"><span id="div284:285:863:551" class="cwedata" data-hover="CWE-551:Incorrect Behavior Order: Authorization Before Parsing and Canonicalization -- If a web server does not fully parse requested URLs before it examines them for authorization, it may be possible for an attacker to bypass authorization protection."><a href="https://cwe.mitre.org/data/definitions/551.html" target="_blank">CWE-551</a>:Incorrect Behavior Order: Authorization Before Parsing and Canonicalization <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -691,7 +691,7 @@
 </li>
 <li><input type="checkbox" id="284:287:306" name="284:287:306" value="284:287:306" onclick="checkTree('284:287:306');"><span class="caret"><span id="div284:287:306" class="cwedata" data-hover="CWE-306:Missing Authentication for Critical Function -- The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources."><a href="https://cwe.mitre.org/data/definitions/306.html" target="_blank">CWE-306</a>:Missing Authentication for Critical Function <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="284:287:306:288" name="284:287:306:288" value="284:287:306:288" onclick="checkTree('284:287:306:288');"><span class="caret"><span id="div284:287:306:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- A product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:306:288" name="284:287:306:288" value="284:287:306:288" onclick="checkTree('284:287:306:288');"><span class="caret"><span id="div284:287:306:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- The product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="284:287:306:288:425" name="284:287:306:288:425" value="284:287:306:288:425" onclick="checkTree('284:287:306:288:425');"><span class="caret"><span id="div284:287:306:288:425" class="cwedata" data-hover="CWE-425:Direct Request ('Forced Browsing') -- The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."><a href="https://cwe.mitre.org/data/definitions/425.html" target="_blank">CWE-425</a>:Direct Request ('Forced Browsing') <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -713,7 +713,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:307" name="284:287:307" value="284:287:307" onclick="checkTree('284:287:307');"><span class="caret"><span id="div284:287:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:307" name="284:287:307" value="284:287:307" onclick="checkTree('284:287:307');"><span class="caret"><span id="div284:287:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -839,7 +839,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:1390:307" name="284:287:1390:307" value="284:287:1390:307" onclick="checkTree('284:287:1390:307');"><span class="caret"><span id="div284:287:1390:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:1390:307" name="284:287:1390:307" value="284:287:1390:307" onclick="checkTree('284:287:1390:307');"><span class="caret"><span id="div284:287:1390:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -955,7 +955,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:288" name="284:288" value="284:288" onclick="checkTree('284:288');"><span class="caret"><span id="div284:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- A product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:288" name="284:288" value="284:288" onclick="checkTree('284:288');"><span class="caret"><span id="div284:288" class="cwedata" data-hover="CWE-288:Authentication Bypass Using an Alternate Path or Channel -- The product requires authentication, but the product has an alternate path or channel that does not require authentication."><a href="https://cwe.mitre.org/data/definitions/288.html" target="_blank">CWE-288</a>:Authentication Bypass Using an Alternate Path or Channel <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="284:288:425" name="284:288:425" value="284:288:425" onclick="checkTree('284:288:425');"><span class="caret"><span id="div284:288:425" class="cwedata" data-hover="CWE-425:Direct Request ('Forced Browsing') -- The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files."><a href="https://cwe.mitre.org/data/definitions/425.html" target="_blank">CWE-425</a>:Direct Request ('Forced Browsing') <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -1035,7 +1035,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="284:863" name="284:863" value="284:863" onclick="checkTree('284:863');"><span class="caret"><span id="div284:863" class="cwedata" data-hover="CWE-863:Incorrect Authorization -- The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check. This allows attackers to bypass intended access restrictions."><a href="https://cwe.mitre.org/data/definitions/863.html" target="_blank">CWE-863</a>:Incorrect Authorization <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="284:863" name="284:863" value="284:863" onclick="checkTree('284:863');"><span class="caret"><span id="div284:863" class="cwedata" data-hover="CWE-863:Incorrect Authorization -- The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check."><a href="https://cwe.mitre.org/data/definitions/863.html" target="_blank">CWE-863</a>:Incorrect Authorization <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="284:863:551" name="284:863:551" value="284:863:551" onclick="checkTree('284:863:551');"><span class="caret"><span id="div284:863:551" class="cwedata" data-hover="CWE-551:Incorrect Behavior Order: Authorization Before Parsing and Canonicalization -- If a web server does not fully parse requested URLs before it examines them for authorization, it may be possible for an attacker to bypass authorization protection."><a href="https://cwe.mitre.org/data/definitions/551.html" target="_blank">CWE-551</a>:Incorrect Behavior Order: Authorization Before Parsing and Canonicalization <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -1940,7 +1940,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="664:610:601" name="664:610:601" value="664:610:601" onclick="checkTree('664:610:601');"><span class="caret"><span id="div664:610:601" class="cwedata" data-hover="CWE-601:URL Redirection to Untrusted Site ('Open Redirect') -- A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks."><a href="https://cwe.mitre.org/data/definitions/601.html" target="_blank">CWE-601</a>:URL Redirection to Untrusted Site ('Open Redirect') <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:610:601" name="664:610:601" value="664:610:601" onclick="checkTree('664:610:601');"><span class="caret"><span id="div664:610:601" class="cwedata" data-hover="CWE-601:URL Redirection to Untrusted Site ('Open Redirect') -- The web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a redirect."><a href="https://cwe.mitre.org/data/definitions/601.html" target="_blank">CWE-601</a>:URL Redirection to Untrusted Site ('Open Redirect') <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -2437,13 +2437,13 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="664:668:200:532" name="664:668:200:532" value="664:668:200:532" onclick="checkTree('664:668:200:532');"><span class="caret"><span id="div664:668:200:532" class="cwedata" data-hover="CWE-532:Insertion of Sensitive Information into Log File -- Information written to log files can be of a sensitive nature and give valuable guidance to an attacker or expose sensitive user information."><a href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a>:Insertion of Sensitive Information into Log File <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:668:200:532" name="664:668:200:532" value="664:668:200:532" onclick="checkTree('664:668:200:532');"><span class="caret"><span id="div664:668:200:532" class="cwedata" data-hover="CWE-532:Insertion of Sensitive Information into Log File -- The product writes sensitive information to a log file."><a href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a>:Insertion of Sensitive Information into Log File <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
 <li><input type="checkbox" id="664:668:200:538" name="664:668:200:538" value="664:668:200:538" onclick="checkTree('664:668:200:538');"><span class="caret"><span id="div664:668:200:538" class="cwedata" data-hover="CWE-538:Insertion of Sensitive Information into Externally-Accessible File or Directory -- The product places sensitive information into files or directories that are accessible to actors who are allowed to have access to the files, but not to the sensitive information."><a href="https://cwe.mitre.org/data/definitions/538.html" target="_blank">CWE-538</a>:Insertion of Sensitive Information into Externally-Accessible File or Directory <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:668:200:538:532" name="664:668:200:538:532" value="664:668:200:538:532" onclick="checkTree('664:668:200:538:532');"><span class="caret"><span id="div664:668:200:538:532" class="cwedata" data-hover="CWE-532:Insertion of Sensitive Information into Log File -- Information written to log files can be of a sensitive nature and give valuable guidance to an attacker or expose sensitive user information."><a href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a>:Insertion of Sensitive Information into Log File <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:668:200:538:532" name="664:668:200:538:532" value="664:668:200:538:532" onclick="checkTree('664:668:200:538:532');"><span class="caret"><span id="div664:668:200:538:532" class="cwedata" data-hover="CWE-532:Insertion of Sensitive Information into Log File -- The product writes sensitive information to a log file."><a href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a>:Insertion of Sensitive Information into Log File <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3113,7 +3113,7 @@
 </li>
 <li><input type="checkbox" id="664:913" name="664:913" value="664:913" onclick="checkTree('664:913');"><span class="caret"><span id="div664:913" class="cwedata" data-hover="CWE-913:Improper Control of Dynamically-Managed Code Resources -- The product does not properly restrict reading from or writing to dynamically-managed code resources such as variables, objects, classes, attributes, functions, or executable instructions or statements."><a href="https://cwe.mitre.org/data/definitions/913.html" target="_blank">CWE-913</a>:Improper Control of Dynamically-Managed Code Resources <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:913:94" name="664:913:94" value="664:913:94" onclick="checkTree('664:913:94');"><span class="caret"><span id="div664:913:94" class="cwedata" data-hover="CWE-94:Improper Control of Generation of Code ('Code Injection') -- The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment."><a href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a>:Improper Control of Generation of Code ('Code Injection') <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:913:94" name="664:913:94" value="664:913:94" onclick="checkTree('664:913:94');"><span class="caret"><span id="div664:913:94" class="cwedata" data-hover="CWE-94:Improper Control of Generation of Code ('Code Injection') -- The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment."><a href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a>:Improper Control of Generation of Code ('Code Injection') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:913:94:95" name="664:913:94:95" value="664:913:94:95" onclick="checkTree('664:913:94:95');"><span class="caret"><span id="div664:913:94:95" class="cwedata" data-hover="CWE-95:Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') -- The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes code syntax before using the input in a dynamic evaluation call (e.g. &quot;eval&quot;)."><a href="https://cwe.mitre.org/data/definitions/95.html" target="_blank">CWE-95</a>:Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -3137,7 +3137,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="664:913:502" name="664:913:502" value="664:913:502" onclick="checkTree('664:913:502');"><span class="caret"><span id="div664:913:502" class="cwedata" data-hover="CWE-502:Deserialization of Untrusted Data -- The product deserializes untrusted data without sufficiently verifying that the resulting data will be valid."><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a>:Deserialization of Untrusted Data <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:913:502" name="664:913:502" value="664:913:502" onclick="checkTree('664:913:502');"><span class="caret"><span id="div664:913:502" class="cwedata" data-hover="CWE-502:Deserialization of Untrusted Data -- The product deserializes untrusted data without sufficiently ensuring that the resulting data will be valid."><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a>:Deserialization of Untrusted Data <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3254,7 +3254,7 @@
 </li>
 <li><input type="checkbox" id="691" name="691" value="691" onclick="checkTree('691');"><span class="caret"><span id="div691" class="cwedata" data-hover="CWE-691:Insufficient Control Flow Management -- The code does not sufficiently manage its control flow during execution, creating conditions in which the control flow can be modified in unexpected ways."><a href="https://cwe.mitre.org/data/definitions/691.html" target="_blank">CWE-691</a>:Insufficient Control Flow Management <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="691:362" name="691:362" value="691:362" onclick="checkTree('691:362');"><span class="caret"><span id="div691:362" class="cwedata" data-hover="CWE-362:Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') -- The product contains a code sequence that can run concurrently with other code, and the code sequence requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence that is operating concurrently."><a href="https://cwe.mitre.org/data/definitions/362.html" target="_blank">CWE-362</a>:Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="691:362" name="691:362" value="691:362" onclick="checkTree('691:362');"><span class="caret"><span id="div691:362" class="cwedata" data-hover="CWE-362:Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') -- The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence operating concurrently."><a href="https://cwe.mitre.org/data/definitions/362.html" target="_blank">CWE-362</a>:Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="691:362:364" name="691:362:364" value="691:362:364" onclick="checkTree('691:362:364');"><span class="caret"><span id="div691:362:364" class="cwedata" data-hover="CWE-364:Signal Handler Race Condition -- The product uses a signal handler that introduces a race condition."><a href="https://cwe.mitre.org/data/definitions/364.html" target="_blank">CWE-364</a>:Signal Handler Race Condition <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -3574,7 +3574,7 @@
 </li>
 <li><input type="checkbox" id="691:799" name="691:799" value="691:799" onclick="checkTree('691:799');"><span class="caret"><span id="div691:799" class="cwedata" data-hover="CWE-799:Improper Control of Interaction Frequency -- The product does not properly limit the number or frequency of interactions that it has with an actor, such as the number of incoming requests."><a href="https://cwe.mitre.org/data/definitions/799.html" target="_blank">CWE-799</a>:Improper Control of Interaction Frequency <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="691:799:307" name="691:799:307" value="691:799:307" onclick="checkTree('691:799:307');"><span class="caret"><span id="div691:799:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="691:799:307" name="691:799:307" value="691:799:307" onclick="checkTree('691:799:307');"><span class="caret"><span id="div691:799:307" class="cwedata" data-hover="CWE-307:Improper Restriction of Excessive Authentication Attempts -- The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame."><a href="https://cwe.mitre.org/data/definitions/307.html" target="_blank">CWE-307</a>:Improper Restriction of Excessive Authentication Attempts <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3629,7 +3629,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="693:184" name="693:184" value="693:184" onclick="checkTree('693:184');"><span class="caret"><span id="div693:184" class="cwedata" data-hover="CWE-184:Incomplete List of Disallowed Inputs -- The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete, leading to resultant weaknesses."><a href="https://cwe.mitre.org/data/definitions/184.html" target="_blank">CWE-184</a>:Incomplete List of Disallowed Inputs <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="693:184" name="693:184" value="693:184" onclick="checkTree('693:184');"><span class="caret"><span id="div693:184" class="cwedata" data-hover="CWE-184:Incomplete List of Disallowed Inputs -- The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete."><a href="https://cwe.mitre.org/data/definitions/184.html" target="_blank">CWE-184</a>:Incomplete List of Disallowed Inputs <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="693:184:692" name="693:184:692" value="693:184:692" onclick="checkTree('693:184:692');"><span class="caret"><span id="div693:184:692" class="cwedata" data-hover="CWE-692:Incomplete Denylist to Cross-Site Scripting -- The product uses a denylist-based protection mechanism to defend against XSS attacks, but the denylist is incomplete, allowing XSS variants to succeed."><a href="https://cwe.mitre.org/data/definitions/692.html" target="_blank">CWE-692</a>:Incomplete Denylist to Cross-Site Scripting <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
@@ -4095,7 +4095,7 @@
 </li>
 <li><input type="checkbox" id="697:1023" name="697:1023" value="697:1023" onclick="checkTree('697:1023');"><span class="caret"><span id="div697:1023" class="cwedata" data-hover="CWE-1023:Incomplete Comparison with Missing Factors -- The product performs a comparison between entities that must consider multiple factors or characteristics of each entity, but the comparison does not include one or more of these factors."><a href="https://cwe.mitre.org/data/definitions/1023.html" target="_blank">CWE-1023</a>:Incomplete Comparison with Missing Factors <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="697:1023:184" name="697:1023:184" value="697:1023:184" onclick="checkTree('697:1023:184');"><span class="caret"><span id="div697:1023:184" class="cwedata" data-hover="CWE-184:Incomplete List of Disallowed Inputs -- The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete, leading to resultant weaknesses."><a href="https://cwe.mitre.org/data/definitions/184.html" target="_blank">CWE-184</a>:Incomplete List of Disallowed Inputs <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="697:1023:184" name="697:1023:184" value="697:1023:184" onclick="checkTree('697:1023:184');"><span class="caret"><span id="div697:1023:184" class="cwedata" data-hover="CWE-184:Incomplete List of Disallowed Inputs -- The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete."><a href="https://cwe.mitre.org/data/definitions/184.html" target="_blank">CWE-184</a>:Incomplete List of Disallowed Inputs <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="697:1023:184:692" name="697:1023:184:692" value="697:1023:184:692" onclick="checkTree('697:1023:184:692');"><span class="caret"><span id="div697:1023:184:692" class="cwedata" data-hover="CWE-692:Incomplete Denylist to Cross-Site Scripting -- The product uses a denylist-based protection mechanism to defend against XSS attacks, but the denylist is incomplete, allowing XSS variants to succeed."><a href="https://cwe.mitre.org/data/definitions/692.html" target="_blank">CWE-692</a>:Incomplete Denylist to Cross-Site Scripting <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
@@ -4632,7 +4632,7 @@
 </li>
 <li><input type="checkbox" id="707:20:170:682:131" name="707:20:170:682:131" value="707:20:170:682:131" onclick="checkTree('707:20:170:682:131');"><span class="caret"><span id="div707:20:170:682:131" class="cwedata" data-hover="CWE-131:Incorrect Calculation of Buffer Size -- The product does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/131.html" target="_blank">CWE-131</a>:Incorrect Calculation of Buffer Size <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="707:20:170:682:131:467" name="707:20:170:682:131:467" value="707:20:170:682:131:467" onclick="checkTree('707:20:170:682:131:467');"><span class="caret"><span id="div707:20:170:682:131:467" class="cwedata" data-hover="CWE-467:Use of sizeof() on a Pointer Type -- The code calls sizeof() on a malloced pointer type, which always returns the wordsize/8. This can produce an unexpected result if the programmer intended to determine how much memory has been allocated."><a href="https://cwe.mitre.org/data/definitions/467.html" target="_blank">CWE-467</a>:Use of sizeof() on a Pointer Type <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="707:20:170:682:131:467" name="707:20:170:682:131:467" value="707:20:170:682:131:467" onclick="checkTree('707:20:170:682:131:467');"><span class="caret"><span id="div707:20:170:682:131:467" class="cwedata" data-hover="CWE-467:Use of sizeof() on a Pointer Type -- The code calls sizeof() on a pointer type, which can be an incorrect calculation if the programmer intended to determine the size of the data that is being pointed to."><a href="https://cwe.mitre.org/data/definitions/467.html" target="_blank">CWE-467</a>:Use of sizeof() on a Pointer Type <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -4834,6 +4834,13 @@ intended arguments, options, or switches within that command string."><a href="h
 <ul class="nested">
 </ul>
 </li>
+<li><input type="checkbox" id="707:74:77:1427" name="707:74:77:1427" value="707:74:77:1427" onclick="checkTree('707:74:77:1427');"><span class="caret"><span id="div707:74:77:1427" class="cwedata" data-hover="CWE-1427:Improper Neutralization of Input Used for LLM Prompting -- The product uses externally-provided data to build prompts provided to
+large language models (LLMs), but the way these prompts are constructed
+causes the LLM to fail to distinguish between user-supplied inputs and
+developer provided system directives."><a href="https://cwe.mitre.org/data/definitions/1427.html" target="_blank">CWE-1427</a>:Improper Neutralization of Input Used for LLM Prompting <i><b>(Allowed)</b></i></span></span>
+<ul class="nested">
+</ul>
+</li>
 </ul>
 </li>
 <li><input type="checkbox" id="707:74:78" name="707:74:78" value="707:74:78" onclick="checkTree('707:74:78');"><span class="caret"><span id="div707:74:78" class="cwedata" data-hover="CWE-78:Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') -- The product constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component."><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a>:Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') <i><b>(Allowed)</b></i></span></span>
@@ -4910,7 +4917,7 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="707:74:94" name="707:74:94" value="707:74:94" onclick="checkTree('707:74:94');"><span class="caret"><span id="div707:74:94" class="cwedata" data-hover="CWE-94:Improper Control of Generation of Code ('Code Injection') -- The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment."><a href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a>:Improper Control of Generation of Code ('Code Injection') <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="707:74:94" name="707:74:94" value="707:74:94" onclick="checkTree('707:74:94');"><span class="caret"><span id="div707:74:94" class="cwedata" data-hover="CWE-94:Improper Control of Generation of Code ('Code Injection') -- The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment."><a href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a>:Improper Control of Generation of Code ('Code Injection') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="707:74:94:95" name="707:74:94:95" value="707:74:94:95" onclick="checkTree('707:74:94:95');"><span class="caret"><span id="div707:74:94:95" class="cwedata" data-hover="CWE-95:Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') -- The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes code syntax before using the input in a dynamic evaluation call (e.g. &quot;eval&quot;)."><a href="https://cwe.mitre.org/data/definitions/95.html" target="_blank">CWE-95</a>:Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -5230,7 +5237,7 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 <li><input type="checkbox" id="707:170:682:131" name="707:170:682:131" value="707:170:682:131" onclick="checkTree('707:170:682:131');"><span class="caret"><span id="div707:170:682:131" class="cwedata" data-hover="CWE-131:Incorrect Calculation of Buffer Size -- The product does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/131.html" target="_blank">CWE-131</a>:Incorrect Calculation of Buffer Size <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="707:170:682:131:467" name="707:170:682:131:467" value="707:170:682:131:467" onclick="checkTree('707:170:682:131:467');"><span class="caret"><span id="div707:170:682:131:467" class="cwedata" data-hover="CWE-467:Use of sizeof() on a Pointer Type -- The code calls sizeof() on a malloced pointer type, which always returns the wordsize/8. This can produce an unexpected result if the programmer intended to determine how much memory has been allocated."><a href="https://cwe.mitre.org/data/definitions/467.html" target="_blank">CWE-467</a>:Use of sizeof() on a Pointer Type <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="707:170:682:131:467" name="707:170:682:131:467" value="707:170:682:131:467" onclick="checkTree('707:170:682:131:467');"><span class="caret"><span id="div707:170:682:131:467" class="cwedata" data-hover="CWE-467:Use of sizeof() on a Pointer Type -- The code calls sizeof() on a pointer type, which can be an incorrect calculation if the programmer intended to determine the size of the data that is being pointed to."><a href="https://cwe.mitre.org/data/definitions/467.html" target="_blank">CWE-467</a>:Use of sizeof() on a Pointer Type <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -6321,14 +6328,14 @@ intended arguments, options, or switches within that command string."><a href="h
                 });
             }
         </script>
-        <input type="hidden" id="cweIDCountHidden" value="939">
+        <input type="hidden" id="cweIDCountHidden" value="940">
         <input type="hidden" id="cweIDCountStatusDraftHidden" value="431">
-        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="482">
+        <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="483">
         <input type="hidden" id="cweIDCountStatusStableHidden" value="26">
         <input type="hidden" id="cweIDCountStatusDeprecatedHidden" value="25">
         <input type="hidden" id="cweIDCountStatusOtherHidden" value="0">
         <input type="hidden" id="cweIDCountUsageAllowedHidden" value="752">
-        <input type="hidden" id="cweIDCountUsageAllowedWithReviewHidden" value="86">
+        <input type="hidden" id="cweIDCountUsageAllowedWithReviewHidden" value="87">
         <input type="hidden" id="cweIDCountUsageDiscouragedHidden" value="42">
         <input type="hidden" id="cweIDCountUsageProhibitedHidden" value="84">
         <input type="hidden" id="cweIDCountUsageOtherHidden" value="0">
