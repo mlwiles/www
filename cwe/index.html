@@ -277,7 +277,7 @@
                 }
             }
             function checkVersion() {
-                var current = 4.17;
+                var current = 4.18;
                 let xmlHttpReq = new XMLHttpRequest();
                 xmlHttpReq.open("GET", "https://cwe.mitre.org/data/index.html", false); 
                 xmlHttpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -295,7 +295,7 @@
     <center>
     <table>
     <tr><td colspan="2" align="center"><b>CWETree</b></td></tr>
-    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.17 (2025-04-03)</b></td></tr>
+    <tr><td>Generated from CWE Version:</td><td td align="right"><b>4.18 (2025-09-09)</b></td></tr>
     <!-- <tr><td>&nbsp;</td><td td align="right"><input type="button" onclick="checkVersion();" id="versionBTN" value="Check Version"/></td></tr> -->
     <tr><td><b>TOTAL</b> Number of CWE Weaknesses:</td><td align="right" id="cweIDCountDisplay"></td></tr>
     <tr><td>Number of Deprecated (Status) CWE Weaknesses:</td><td align="right" id="cweIDCountStatusDeprecatedDisplay"></td></tr>
@@ -578,7 +578,11 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:285:863:942" name="284:285:863:942" value="284:285:863:942" onclick="checkTree('284:285:863:942');"><span class="caret"><span id="div284:285:863:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Policy with Untrusted Domains -- The product uses a cross-domain policy file that includes domains that should not be trusted."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:285:863:942" name="284:285:863:942" value="284:285:863:942" onclick="checkTree('284:285:863:942');"><span class="caret"><span id="div284:285:863:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Security Policy with Untrusted Domains -- The product uses a web-client protection
+         mechanism such as a Content Security Policy (CSP) or
+         cross-domain policy file, but the policy includes untrusted
+         domains with which the web client is allowed to
+         communicate."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Security Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -727,7 +731,7 @@
 </li>
 <li><input type="checkbox" id="284:287:522" name="284:287:522" value="284:287:522" onclick="checkTree('284:287:522');"><span class="caret"><span id="div284:287:522" class="cwedata" data-hover="CWE-522:Insufficiently Protected Credentials -- The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."><a href="https://cwe.mitre.org/data/definitions/522.html" target="_blank">CWE-522</a>:Insufficiently Protected Credentials <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="284:287:522:256" name="284:287:522:256" value="284:287:522:256" onclick="checkTree('284:287:522:256');"><span class="caret"><span id="div284:287:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- Storing a password in plaintext may result in a system compromise."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:522:256" name="284:287:522:256" value="284:287:522:256" onclick="checkTree('284:287:522:256');"><span class="caret"><span id="div284:287:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- The product stores a password in plaintext within resources such as memory or files."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -791,7 +795,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:287:1390:263" name="284:287:1390:263" value="284:287:1390:263" onclick="checkTree('284:287:1390:263');"><span class="caret"><span id="div284:287:1390:263" class="cwedata" data-hover="CWE-263:Password Aging with Long Expiration -- The product supports password aging, but the expiration period is too long."><a href="https://cwe.mitre.org/data/definitions/263.html" target="_blank">CWE-263</a>:Password Aging with Long Expiration <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:1390:263" name="284:287:1390:263" value="284:287:1390:263" onclick="checkTree('284:287:1390:263');"><span class="caret"><span id="div284:287:1390:263" class="cwedata" data-hover="CWE-263:Password Aging with Long Expiration -- The product supports password aging, but the expiration period is too long."><a href="https://cwe.mitre.org/data/definitions/263.html" target="_blank">CWE-263</a>:Password Aging with Long Expiration <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -853,7 +857,7 @@
 </li>
 <li><input type="checkbox" id="284:287:1390:522" name="284:287:1390:522" value="284:287:1390:522" onclick="checkTree('284:287:1390:522');"><span class="caret"><span id="div284:287:1390:522" class="cwedata" data-hover="CWE-522:Insufficiently Protected Credentials -- The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."><a href="https://cwe.mitre.org/data/definitions/522.html" target="_blank">CWE-522</a>:Insufficiently Protected Credentials <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="284:287:1390:522:256" name="284:287:1390:522:256" value="284:287:1390:522:256" onclick="checkTree('284:287:1390:522:256');"><span class="caret"><span id="div284:287:1390:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- Storing a password in plaintext may result in a system compromise."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:287:1390:522:256" name="284:287:1390:522:256" value="284:287:1390:522:256" onclick="checkTree('284:287:1390:522:256');"><span class="caret"><span id="div284:287:1390:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- The product stores a password in plaintext within resources such as memory or files."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -1057,7 +1061,11 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:863:942" name="284:863:942" value="284:863:942" onclick="checkTree('284:863:942');"><span class="caret"><span id="div284:863:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Policy with Untrusted Domains -- The product uses a cross-domain policy file that includes domains that should not be trusted."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:863:942" name="284:863:942" value="284:863:942" onclick="checkTree('284:863:942');"><span class="caret"><span id="div284:863:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Security Policy with Untrusted Domains -- The product uses a web-client protection
+         mechanism such as a Content Security Policy (CSP) or
+         cross-domain policy file, but the policy includes untrusted
+         domains with which the web client is allowed to
+         communicate."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Security Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -1121,7 +1129,11 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="284:923:942" name="284:923:942" value="284:923:942" onclick="checkTree('284:923:942');"><span class="caret"><span id="div284:923:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Policy with Untrusted Domains -- The product uses a cross-domain policy file that includes domains that should not be trusted."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="284:923:942" name="284:923:942" value="284:923:942" onclick="checkTree('284:923:942');"><span class="caret"><span id="div284:923:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Security Policy with Untrusted Domains -- The product uses a web-client protection
+         mechanism such as a Content Security Policy (CSP) or
+         cross-domain policy file, but the policy includes untrusted
+         domains with which the web client is allowed to
+         communicate."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Security Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -1450,7 +1462,7 @@
 <ul class="nested">
 <li><input type="checkbox" id="664:118:119" name="664:118:119" value="664:118:119" onclick="checkTree('664:118:119');"><span class="caret"><span id="div664:118:119" class="cwedata" data-hover="CWE-119:Improper Restriction of Operations within the Bounds of a Memory Buffer -- The product performs operations on a memory buffer, but it reads from or writes to a memory location outside the buffer's intended boundary. This may result in read or write operations on unexpected memory locations that could be linked to other variables, data structures, or internal program data."><a href="https://cwe.mitre.org/data/definitions/119.html" target="_blank">CWE-119</a>:Improper Restriction of Operations within the Bounds of a Memory Buffer <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:118:119:120" name="664:118:119:120" value="664:118:119:120" onclick="checkTree('664:118:119:120');"><span class="caret"><span id="div664:118:119:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="664:118:119:120" name="664:118:119:120" value="664:118:119:120" onclick="checkTree('664:118:119:120');"><span class="caret"><span id="div664:118:119:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:118:119:120:785" name="664:118:119:120:785" value="664:118:119:120:785" onclick="checkTree('664:118:119:120:785');"><span class="caret"><span id="div664:118:119:120:785" class="cwedata" data-hover="CWE-785:Use of Path Manipulation Function without Maximum-sized Buffer -- The product invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."><a href="https://cwe.mitre.org/data/definitions/785.html" target="_blank">CWE-785</a>:Use of Path Manipulation Function without Maximum-sized Buffer <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -1496,7 +1508,7 @@
 </li>
 <li><input type="checkbox" id="664:118:119:787" name="664:118:119:787" value="664:118:119:787" onclick="checkTree('664:118:119:787');"><span class="caret"><span id="div664:118:119:787" class="cwedata" data-hover="CWE-787:Out-of-bounds Write -- The product writes data past the end, or before the beginning, of the intended buffer."><a href="https://cwe.mitre.org/data/definitions/787.html" target="_blank">CWE-787</a>:Out-of-bounds Write <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:118:119:787:120" name="664:118:119:787:120" value="664:118:119:787:120" onclick="checkTree('664:118:119:787:120');"><span class="caret"><span id="div664:118:119:787:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="664:118:119:787:120" name="664:118:119:787:120" value="664:118:119:787:120" onclick="checkTree('664:118:119:787:120');"><span class="caret"><span id="div664:118:119:787:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:118:119:787:120:785" name="664:118:119:787:120:785" value="664:118:119:787:120:785" onclick="checkTree('664:118:119:787:120:785');"><span class="caret"><span id="div664:118:119:787:120:785" class="cwedata" data-hover="CWE-785:Use of Path Manipulation Function without Maximum-sized Buffer -- The product invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."><a href="https://cwe.mitre.org/data/definitions/785.html" target="_blank">CWE-785</a>:Use of Path Manipulation Function without Maximum-sized Buffer <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -1721,7 +1733,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="664:400:770" name="664:400:770" value="664:400:770" onclick="checkTree('664:400:770');"><span class="caret"><span id="div664:400:770" class="cwedata" data-hover="CWE-770:Allocation of Resources Without Limits or Throttling -- The product allocates a reusable resource or group of resources on behalf of an actor without imposing any restrictions on the size or number of resources that can be allocated, in violation of the intended security policy for that actor."><a href="https://cwe.mitre.org/data/definitions/770.html" target="_blank">CWE-770</a>:Allocation of Resources Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:400:770" name="664:400:770" value="664:400:770" onclick="checkTree('664:400:770');"><span class="caret"><span id="div664:400:770" class="cwedata" data-hover="CWE-770:Allocation of Resources Without Limits or Throttling -- The product allocates a reusable resource or group of resources on behalf of an actor without imposing any intended restrictions on the size or number of resources that can be allocated."><a href="https://cwe.mitre.org/data/definitions/770.html" target="_blank">CWE-770</a>:Allocation of Resources Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:400:770:774" name="664:400:770:774" value="664:400:770:774" onclick="checkTree('664:400:770:774');"><span class="caret"><span id="div664:400:770:774" class="cwedata" data-hover="CWE-774:Allocation of File Descriptors or Handles Without Limits or Throttling -- The product allocates file descriptors or handles on behalf of an actor without imposing any restrictions on how many descriptors can be allocated, in violation of the intended security policy for that actor."><a href="https://cwe.mitre.org/data/definitions/774.html" target="_blank">CWE-774</a>:Allocation of File Descriptors or Handles Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -2112,7 +2124,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="664:665:770" name="664:665:770" value="664:665:770" onclick="checkTree('664:665:770');"><span class="caret"><span id="div664:665:770" class="cwedata" data-hover="CWE-770:Allocation of Resources Without Limits or Throttling -- The product allocates a reusable resource or group of resources on behalf of an actor without imposing any restrictions on the size or number of resources that can be allocated, in violation of the intended security policy for that actor."><a href="https://cwe.mitre.org/data/definitions/770.html" target="_blank">CWE-770</a>:Allocation of Resources Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:665:770" name="664:665:770" value="664:665:770" onclick="checkTree('664:665:770');"><span class="caret"><span id="div664:665:770" class="cwedata" data-hover="CWE-770:Allocation of Resources Without Limits or Throttling -- The product allocates a reusable resource or group of resources on behalf of an actor without imposing any intended restrictions on the size or number of resources that can be allocated."><a href="https://cwe.mitre.org/data/definitions/770.html" target="_blank">CWE-770</a>:Allocation of Resources Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="664:665:770:774" name="664:665:770:774" value="664:665:770:774" onclick="checkTree('664:665:770:774');"><span class="caret"><span id="div664:665:770:774" class="cwedata" data-hover="CWE-774:Allocation of File Descriptors or Handles Without Limits or Throttling -- The product allocates file descriptors or handles on behalf of an actor without imposing any restrictions on how many descriptors can be allocated, in violation of the intended security policy for that actor."><a href="https://cwe.mitre.org/data/definitions/774.html" target="_blank">CWE-774</a>:Allocation of File Descriptors or Handles Without Limits or Throttling <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -2187,6 +2199,13 @@
 <ul class="nested">
 </ul>
 </li>
+</ul>
+</li>
+<li><input type="checkbox" id="664:665:1434" name="664:665:1434" value="664:665:1434" onclick="checkTree('664:665:1434');"><span class="caret"><span id="div664:665:1434" class="cwedata" data-hover="CWE-1434:Insecure Setting of Generative AI/ML Model Inference Parameters -- The product has a component that relies on a
+	  generative AI/ML model configured with inference parameters that
+	  produce an unacceptably high rate of erroneous or unexpected
+	  outputs."><a href="https://cwe.mitre.org/data/definitions/1434.html" target="_blank">CWE-1434</a>:Insecure Setting of Generative AI/ML Model Inference Parameters <i><b>(Allowed)</b></i></span></span>
+<ul class="nested">
 </ul>
 </li>
 </ul>
@@ -2494,7 +2513,7 @@
 </li>
 <li><input type="checkbox" id="664:668:522" name="664:668:522" value="664:668:522" onclick="checkTree('664:668:522');"><span class="caret"><span id="div664:668:522" class="cwedata" data-hover="CWE-522:Insufficiently Protected Credentials -- The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."><a href="https://cwe.mitre.org/data/definitions/522.html" target="_blank">CWE-522</a>:Insufficiently Protected Credentials <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="664:668:522:256" name="664:668:522:256" value="664:668:522:256" onclick="checkTree('664:668:522:256');"><span class="caret"><span id="div664:668:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- Storing a password in plaintext may result in a system compromise."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="664:668:522:256" name="664:668:522:256" value="664:668:522:256" onclick="checkTree('664:668:522:256');"><span class="caret"><span id="div664:668:522:256" class="cwedata" data-hover="CWE-256:Plaintext Storage of a Password -- The product stores a password in plaintext within resources such as memory or files."><a href="https://cwe.mitre.org/data/definitions/256.html" target="_blank">CWE-256</a>:Plaintext Storage of a Password <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3217,7 +3236,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="691:362:367" name="691:362:367" value="691:362:367" onclick="checkTree('691:362:367');"><span class="caret"><span id="div691:362:367" class="cwedata" data-hover="CWE-367:Time-of-check Time-of-use (TOCTOU) Race Condition -- The product checks the state of a resource before using that resource, but the resource's state can change between the check and the use in a way that invalidates the results of the check. This can cause the product to perform invalid actions when the resource is in an unexpected state."><a href="https://cwe.mitre.org/data/definitions/367.html" target="_blank">CWE-367</a>:Time-of-check Time-of-use (TOCTOU) Race Condition <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="691:362:367" name="691:362:367" value="691:362:367" onclick="checkTree('691:362:367');"><span class="caret"><span id="div691:362:367" class="cwedata" data-hover="CWE-367:Time-of-check Time-of-use (TOCTOU) Race Condition -- The product checks the state of a resource before using that resource, but the resource's state can change between the check and the use in a way that invalidates the results of the check."><a href="https://cwe.mitre.org/data/definitions/367.html" target="_blank">CWE-367</a>:Time-of-check Time-of-use (TOCTOU) Race Condition <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="691:362:367:363" name="691:362:367:363" value="691:362:367:363" onclick="checkTree('691:362:367:363');"><span class="caret"><span id="div691:362:367:363" class="cwedata" data-hover="CWE-363:Race Condition Enabling Link Following -- The product checks the status of a file or directory before accessing it, which produces a race condition in which the file can be replaced with a link before the access is performed, causing the product to access the wrong file."><a href="https://cwe.mitre.org/data/definitions/363.html" target="_blank">CWE-363</a>:Race Condition Enabling Link Following <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -3610,7 +3629,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="693:311:319:614" name="693:311:319:614" value="693:311:319:614" onclick="checkTree('693:311:319:614');"><span class="caret"><span id="div693:311:319:614" class="cwedata" data-hover="CWE-614:Sensitive Cookie in HTTPS Session Without 'Secure' Attribute -- The Secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to send those cookies in plaintext over an HTTP session."><a href="https://cwe.mitre.org/data/definitions/614.html" target="_blank">CWE-614</a>:Sensitive Cookie in HTTPS Session Without 'Secure' Attribute <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="693:311:319:614" name="693:311:319:614" value="693:311:319:614" onclick="checkTree('693:311:319:614');"><span class="caret"><span id="div693:311:319:614" class="cwedata" data-hover="CWE-614:Sensitive Cookie in HTTPS Session Without 'Secure' Attribute -- The Secure attribute for sensitive cookies in HTTPS sessions is not set."><a href="https://cwe.mitre.org/data/definitions/614.html" target="_blank">CWE-614</a>:Sensitive Cookie in HTTPS Session Without 'Secure' Attribute <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -3978,7 +3997,7 @@
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="693:1318" name="693:1318" value="693:1318" onclick="checkTree('693:1318');"><span class="caret"><span id="div693:1318" class="cwedata" data-hover="CWE-1318:Missing Support for Security Features in On-chip Fabrics or Buses --  On-chip fabrics or buses either do not support or are not configured to support privilege separation or other security features, such as access control. "><a href="https://cwe.mitre.org/data/definitions/1318.html" target="_blank">CWE-1318</a>:Missing Support for Security Features in On-chip Fabrics or Buses <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="693:1318" name="693:1318" value="693:1318" onclick="checkTree('693:1318');"><span class="caret"><span id="div693:1318" class="cwedata" data-hover="CWE-1318:Missing Support for Security Features in On-chip Fabrics or Buses -- On-chip fabrics or buses either do not support or are not configured to support privilege separation or other security features, such as access control."><a href="https://cwe.mitre.org/data/definitions/1318.html" target="_blank">CWE-1318</a>:Missing Support for Security Features in On-chip Fabrics or Buses <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -4000,7 +4019,11 @@
 <ul class="nested">
 <li><input type="checkbox" id="697:183" name="697:183" value="697:183" onclick="checkTree('697:183');"><span class="caret"><span id="div697:183" class="cwedata" data-hover="CWE-183:Permissive List of Allowed Inputs -- The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are explicitly allowed by policy because the inputs are assumed to be safe, but the list is too permissive - that is, it allows an input that is unsafe, leading to resultant weaknesses."><a href="https://cwe.mitre.org/data/definitions/183.html" target="_blank">CWE-183</a>:Permissive List of Allowed Inputs <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="697:183:942" name="697:183:942" value="697:183:942" onclick="checkTree('697:183:942');"><span class="caret"><span id="div697:183:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Policy with Untrusted Domains -- The product uses a cross-domain policy file that includes domains that should not be trusted."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="697:183:942" name="697:183:942" value="697:183:942" onclick="checkTree('697:183:942');"><span class="caret"><span id="div697:183:942" class="cwedata" data-hover="CWE-942:Permissive Cross-domain Security Policy with Untrusted Domains -- The product uses a web-client protection
+         mechanism such as a Content Security Policy (CSP) or
+         cross-domain policy file, but the policy includes untrusted
+         domains with which the web client is allowed to
+         communicate."><a href="https://cwe.mitre.org/data/definitions/942.html" target="_blank">CWE-942</a>:Permissive Cross-domain Security Policy with Untrusted Domains <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 </ul>
 </li>
@@ -4425,7 +4448,7 @@
 </li>
 <li><input type="checkbox" id="707:20:119" name="707:20:119" value="707:20:119" onclick="checkTree('707:20:119');"><span class="caret"><span id="div707:20:119" class="cwedata" data-hover="CWE-119:Improper Restriction of Operations within the Bounds of a Memory Buffer -- The product performs operations on a memory buffer, but it reads from or writes to a memory location outside the buffer's intended boundary. This may result in read or write operations on unexpected memory locations that could be linked to other variables, data structures, or internal program data."><a href="https://cwe.mitre.org/data/definitions/119.html" target="_blank">CWE-119</a>:Improper Restriction of Operations within the Bounds of a Memory Buffer <i><b>(Discouraged)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="707:20:119:120" name="707:20:119:120" value="707:20:119:120" onclick="checkTree('707:20:119:120');"><span class="caret"><span id="div707:20:119:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="707:20:119:120" name="707:20:119:120" value="707:20:119:120" onclick="checkTree('707:20:119:120');"><span class="caret"><span id="div707:20:119:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="707:20:119:120:785" name="707:20:119:120:785" value="707:20:119:120:785" onclick="checkTree('707:20:119:120:785');"><span class="caret"><span id="div707:20:119:120:785" class="cwedata" data-hover="CWE-785:Use of Path Manipulation Function without Maximum-sized Buffer -- The product invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."><a href="https://cwe.mitre.org/data/definitions/785.html" target="_blank">CWE-785</a>:Use of Path Manipulation Function without Maximum-sized Buffer <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -4471,7 +4494,7 @@
 </li>
 <li><input type="checkbox" id="707:20:119:787" name="707:20:119:787" value="707:20:119:787" onclick="checkTree('707:20:119:787');"><span class="caret"><span id="div707:20:119:787" class="cwedata" data-hover="CWE-787:Out-of-bounds Write -- The product writes data past the end, or before the beginning, of the intended buffer."><a href="https://cwe.mitre.org/data/definitions/787.html" target="_blank">CWE-787</a>:Out-of-bounds Write <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
-<li><input type="checkbox" id="707:20:119:787:120" name="707:20:119:787:120" value="707:20:119:787:120" onclick="checkTree('707:20:119:787:120');"><span class="caret"><span id="div707:20:119:787:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="707:20:119:787:120" name="707:20:119:787:120" value="707:20:119:787:120" onclick="checkTree('707:20:119:787:120');"><span class="caret"><span id="div707:20:119:787:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="707:20:119:787:120:785" name="707:20:119:787:120:785" value="707:20:119:787:120:785" onclick="checkTree('707:20:119:787:120:785');"><span class="caret"><span id="div707:20:119:787:120:785" class="cwedata" data-hover="CWE-785:Use of Path Manipulation Function without Maximum-sized Buffer -- The product invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."><a href="https://cwe.mitre.org/data/definitions/785.html" target="_blank">CWE-785</a>:Use of Path Manipulation Function without Maximum-sized Buffer <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -4547,7 +4570,7 @@
 </li>
 </ul>
 </li>
-<li><input type="checkbox" id="707:20:120" name="707:20:120" value="707:20:120" onclick="checkTree('707:20:120');"><span class="caret"><span id="div707:20:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer, leading to a buffer overflow."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
+<li><input type="checkbox" id="707:20:120" name="707:20:120" value="707:20:120" onclick="checkTree('707:20:120');"><span class="caret"><span id="div707:20:120" class="cwedata" data-hover="CWE-120:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') -- The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer."><a href="https://cwe.mitre.org/data/definitions/120.html" target="_blank">CWE-120</a>:Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') <i><b>(Allowed-with-Review)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="707:20:120:785" name="707:20:120:785" value="707:20:120:785" onclick="checkTree('707:20:120:785');"><span class="caret"><span id="div707:20:120:785" class="cwedata" data-hover="CWE-785:Use of Path Manipulation Function without Maximum-sized Buffer -- The product invokes a function for normalizing paths or file names, but it provides an output buffer that is smaller than the maximum possible size, such as PATH_MAX."><a href="https://cwe.mitre.org/data/definitions/785.html" target="_blank">CWE-785</a>:Use of Path Manipulation Function without Maximum-sized Buffer <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -5371,7 +5394,7 @@ intended arguments, options, or switches within that command string."><a href="h
 <ul class="nested">
 </ul>
 </li>
-<li><input type="checkbox" id="710:489" name="710:489" value="710:489" onclick="checkTree('710:489');"><span class="caret"><span id="div710:489" class="cwedata" data-hover="CWE-489:Active Debug Code -- The product is deployed to unauthorized actors with debugging code still enabled or active, which can create unintended entry points or expose sensitive information."><a href="https://cwe.mitre.org/data/definitions/489.html" target="_blank">CWE-489</a>:Active Debug Code <i><b>(Allowed)</b></i></span></span>
+<li><input type="checkbox" id="710:489" name="710:489" value="710:489" onclick="checkTree('710:489');"><span class="caret"><span id="div710:489" class="cwedata" data-hover="CWE-489:Active Debug Code -- The product is released with debugging code still enabled or active."><a href="https://cwe.mitre.org/data/definitions/489.html" target="_blank">CWE-489</a>:Active Debug Code <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
 <li><input type="checkbox" id="710:489:11" name="710:489:11" value="710:489:11" onclick="checkTree('710:489:11');"><span class="caret"><span id="div710:489:11" class="cwedata" data-hover="CWE-11:ASP.NET Misconfiguration: Creating Debug Binary -- Debugging messages help attackers learn about the system and plan a form of attack."><a href="https://cwe.mitre.org/data/definitions/11.html" target="_blank">CWE-11</a>:ASP.NET Misconfiguration: Creating Debug Binary <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
@@ -5663,6 +5686,13 @@ intended arguments, options, or switches within that command string."><a href="h
 </li>
 <li><input type="checkbox" id="710:684:440" name="710:684:440" value="710:684:440" onclick="checkTree('710:684:440');"><span class="caret"><span id="div710:684:440" class="cwedata" data-hover="CWE-440:Expected Behavior Violation -- A feature, API, or function does not perform according to its specification."><a href="https://cwe.mitre.org/data/definitions/440.html" target="_blank">CWE-440</a>:Expected Behavior Violation <i><b>(Allowed)</b></i></span></span>
 <ul class="nested">
+<li><input type="checkbox" id="710:684:440:1434" name="710:684:440:1434" value="710:684:440:1434" onclick="checkTree('710:684:440:1434');"><span class="caret"><span id="div710:684:440:1434" class="cwedata" data-hover="CWE-1434:Insecure Setting of Generative AI/ML Model Inference Parameters -- The product has a component that relies on a
+	  generative AI/ML model configured with inference parameters that
+	  produce an unacceptably high rate of erroneous or unexpected
+	  outputs."><a href="https://cwe.mitre.org/data/definitions/1434.html" target="_blank">CWE-1434</a>:Insecure Setting of Generative AI/ML Model Inference Parameters <i><b>(Allowed)</b></i></span></span>
+<ul class="nested">
+</ul>
+</li>
 </ul>
 </li>
 <li><input type="checkbox" id="710:684:446" name="710:684:446" value="710:684:446" onclick="checkTree('710:684:446');"><span class="caret"><span id="div710:684:446" class="cwedata" data-hover="CWE-446:UI Discrepancy for Security Feature -- The user interface does not correctly enable or configure a security feature, but the interface provides feedback that causes the user to believe that the feature is in a secure state."><a href="https://cwe.mitre.org/data/definitions/446.html" target="_blank">CWE-446</a>:UI Discrepancy for Security Feature <i><b>(Allowed-with-Review)</b></i></span></span>
@@ -6277,15 +6307,15 @@ intended arguments, options, or switches within that command string."><a href="h
                 });
             }
         </script>
-        <input type="hidden" id="cweIDCountHidden" value="943">
-        <input type="hidden" id="cweIDCountStatusDraftHidden" value="431">
+        <input type="hidden" id="cweIDCountHidden" value="944">
+        <input type="hidden" id="cweIDCountStatusDraftHidden" value="432">
         <input type="hidden" id="cweIDCountStatusIncompleteHidden" value="486">
         <input type="hidden" id="cweIDCountStatusStableHidden" value="26">
         <input type="hidden" id="cweIDCountStatusDeprecatedHidden" value="25">
         <input type="hidden" id="cweIDCountStatusOtherHidden" value="0">
         <input type="hidden" id="cweIDCountUsageAllowedHidden" value="753">
         <input type="hidden" id="cweIDCountUsageAllowedWithReviewHidden" value="88">
-        <input type="hidden" id="cweIDCountUsageDiscouragedHidden" value="43">
+        <input type="hidden" id="cweIDCountUsageDiscouragedHidden" value="44">
         <input type="hidden" id="cweIDCountUsageProhibitedHidden" value="84">
         <input type="hidden" id="cweIDCountUsageOtherHidden" value="0">
     </body>
